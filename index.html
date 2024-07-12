@@ -32,6 +32,10 @@
         #progress {
             margin-bottom: 20px;
         }
+        #all-answers {
+            display: none;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -42,8 +46,10 @@
     <button id="submit-answer-button">Submit Answer</button>
     <button id="next-button" style="display:none;">Next</button>
     <button id="submit-button" style="display:none;">Submit Quiz</button>
+    <button id="show-answers-button">Show Answers</button>
     <div class="result" id="result-container"></div>
     <button id="restart-button" style="display:none;">Restart</button>
+    <div id="all-answers"></div>
     
     <script>
         let questions = [];
@@ -58,6 +64,8 @@
         const submitButton = document.getElementById('submit-button');
         const restartButton = document.getElementById('restart-button');
         const progress = document.getElementById('progress');
+        const showAnswersButton = document.getElementById('show-answers-button');
+        const allAnswers = document.getElementById('all-answers');
 
         async function loadQuestions() {
             const response = await fetch('questions.json');
@@ -70,6 +78,7 @@
         function loadQuiz() {
             quizContainer.innerHTML = '';
             resultContainer.innerHTML = '';
+            allAnswers.innerHTML = '';
             questions.forEach((q, index) => {
                 const questionDiv = document.createElement('div');
                 questionDiv.classList.add('question');
@@ -80,6 +89,16 @@
                     <div class="explanation" id="explanation${index}">${q.explanation}</div>
                 `;
                 quizContainer.appendChild(questionDiv);
+
+                const answerDiv = document.createElement('div');
+                answerDiv.classList.add('question');
+                answerDiv.innerHTML = `
+                    <p>${index + 1}. ${q.question}</p>
+                    ${q.options.map((option, i) => `<p>${String.fromCharCode(65 + i)}. ${option}</p>`).join('')}
+                    <p><strong>Correct Answer: ${q.answer.map(a => String.fromCharCode(65 + a)).join(', ')}</strong></p>
+                    <p>${q.explanation}</p>
+                `;
+                allAnswers.appendChild(answerDiv);
             });
         }
 
@@ -154,6 +173,10 @@
             progress.innerHTML = `Questions answered: ${answeredQuestions} / ${questions.length}`;
         }
 
+        function showAllAnswers() {
+            allAnswers.style.display = 'block';
+        }
+
         nextButton.addEventListener('click', () => {
             currentQuestionIndex++;
             showQuestion(currentQuestionIndex);
@@ -176,6 +199,8 @@
         });
 
         restartButton.addEventListener('click', restartQuiz);
+
+        showAnswersButton.addEventListener('click', showAllAnswers);
 
         loadQuestions();
     </script>
