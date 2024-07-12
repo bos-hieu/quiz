@@ -23,6 +23,9 @@
         .incorrect {
             color: red;
         }
+        .correct-answer {
+            color: green;
+        }
         .result {
             margin-top: 20px;
         }
@@ -93,8 +96,13 @@
 
             if (isCorrect) {
                 explanations.classList.add('correct');
+                explanations.style.color = 'blue';
                 submitAnswerButton.style.display = 'none';
                 nextButton.style.display = 'inline';
+                questions[currentQuestionIndex].answer.forEach(answer => {
+                    const correctOption = document.querySelector(`input[name="question${currentQuestionIndex}"][value="${answer}"]`).parentNode;
+                    correctOption.innerHTML += ' <span class="correct-answer">✓</span>';
+                });
             } else {
                 explanations.classList.add('incorrect');
                 explanations.innerHTML += " Please try again.";
