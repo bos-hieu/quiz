@@ -91,7 +91,7 @@
                 quizContainer.appendChild(questionDiv);
 
                 const answerDiv = document.createElement('div');
-                answerDiv.classList.add('question');
+                answerDiv.classList.add('answer');
                 answerDiv.innerHTML = `
                     <p>${index + 1}. ${q.question}</p>
                     ${q.options.map((option, i) => `<p>${String.fromCharCode(65 + i)}. ${option}</p>`).join('')}
@@ -181,6 +181,8 @@
             backButton.style.display = 'none';
             submitButton.style.display = 'none';
             showAnswersButton.style.display = 'none';
+            resultContainer.style.display = 'none';
+            restartButton.style.display = 'inline';
         }
 
         nextButton.addEventListener('click', () => {
