@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Practice Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .explanation {
+            display: none;
+            margin-top: 10px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWS Practice Quiz</h1>
+    <div id="quiz-container"></div>
+    <button id="submit-button">Submit</button>
+    <div class="result" id="result-container"></div>
+    <button id="restart-button" style="display:none;">Restart</button>
+    
+    <script>
+        const questions = [
+            {
+                question: "A company needs to ensure secure access to its AWS resources across multiple accounts. They want to implement a role-based access control strategy and manage permissions efficiently. Which services and practices should they use? (Select TWO.)",
+                options: ["AWS Identity and Access Management (IAM)", "Amazon GuardDuty", "AWS Single Sign-On (AWS SSO)", "AWS Secrets Manager", "Amazon Macie"],
+                answer: [0, 2],
+                explanation: "IAM is essential for managing access to AWS services and resources securely. AWS SSO is used to manage SSO access and user permissions across multiple AWS accounts centrally."
+            },
+            {
+                question: "A company is designing a VPC architecture with private and public subnets. The EC2 instances in the private subnet need to connect to the internet to download software patches but should not be directly accessible from the internet. What should be done to allow the EC2 instances to download patches securely? (Select TWO.)",
+                options: ["Assign Elastic IP addresses to the EC2 instances.", "Configure a NAT gateway in a public subnet.", "Define a custom route table with a route to the NAT gateway for internet traffic and associate it with the private subnets.", "Configure a VPN connection.", "Use an internet gateway in the private subnet."],
+                answer: [1, 2],
+                explanation: "A NAT gateway allows instances in a private subnet to connect to the internet or other AWS services. The custom route table ensures that the traffic from the instances in the private subnets is routed through the NAT gateway for internet access."
+            },
+            // Add more questions in the same format
+        ];
+
+        const quizContainer = document.getElementById('quiz-container');
+        const resultContainer = document.getElementById('result-container');
+        const submitButton = document.getElementById('submit-button');
+        const restartButton = document.getElementById('restart-button');
+
+        function loadQuiz() {
+            quizContainer.innerHTML = '';
+            resultContainer.innerHTML = '';
+            questions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('question');
+                questionDiv.innerHTML = `
+                    <p>${q.question}</p>
+                    ${q.options.map((option, i) => `<label><input type="checkbox" name="question${index}" value="${i}"> ${option}</label><br>`).join('')}
+                    <div class="explanation" id="explanation${index}">${q.explanation}</div>
+                `;
+                quizContainer.appendChild(questionDiv);
+            });
+        }
+
+        function showResults() {
+            let score = 0;
+            questions.forEach((q, index) => {
+                const explanations = document.getElementById(`explanation${index}`);
+                const checkboxes = document.querySelectorAll(`input[name="question${index}"]:checked`);
+                const userAnswers = Array.from(checkboxes).map(cb => parseInt(cb.value));
+                const isCorrect = JSON.stringify(userAnswers.sort()) === JSON.stringify(q.answer.sort());
+
+                if (isCorrect) {
+                    explanations.classList.add('correct');
+                    score++;
+                } else {
+                    explanations.classList.add('incorrect');
+                }
+                explanations.style.display = 'block';
+            });
+            resultContainer.innerHTML = `You scored ${score} out of ${questions.length}.`;
+        }
+
+        function restartQuiz() {
+            loadQuiz();
+            restartButton.style.display = 'none';
+            submitButton.style.display = 'block';
+        }
+
+        submitButton.addEventListener('click', () => {
+            showResults();
+            submitButton.style.display = 'none';
+            restartButton.style.display = 'block';
+        });
+
+        restartButton.addEventListener('click', restartQuiz);
+
+        loadQuiz();
+    </script>
+</body>
+</html>
