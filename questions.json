@@ -173,5 +173,173 @@
         ],
         "answer": [1],
         "explanation": "DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. It is designed to handle high volumes of read and write operations, making it suitable for applications that require low-latency data access at any scale."
-    }
-]
+    },
+        {
+            "question": "A company needs to implement a secure authentication mechanism for its AWS resources that span multiple accounts. Which AWS service allows for centralized management of single sign-on (SSO) access?",
+            "options": [
+                "AWS Directory Service",
+                "AWS Identity and Access Management (IAM)",
+                "AWS Security Token Service (STS)",
+                "AWS Single Sign-On (AWS SSO)"
+            ],
+            "answer": [3],
+            "explanation": "AWS Single Sign-On (AWS SSO) allows you to centrally manage SSO access and user permissions across multiple AWS accounts."
+        },
+        {
+            "question": "A company needs to design a VPC architecture where EC2 instances in private subnets require outbound internet access to download updates. Which combination of actions will achieve this securely? (Select TWO.)",
+            "options": [
+                "Create a NAT gateway in a public subnet.",
+                "Assign Elastic IP addresses to the EC2 instances in private subnets.",
+                "Create an internet gateway and attach it to the VPC.",
+                "Update the route table of the private subnet to direct traffic to the NAT gateway.",
+                "Update the route table of the public subnet to direct traffic to the NAT gateway."
+            ],
+            "answer": [0, 3],
+            "explanation": "Creating a NAT gateway in a public subnet allows instances in private subnets to access the internet while remaining unreachable from the internet. The route table of the private subnet must be updated to direct traffic to the NAT gateway."
+        },
+        {
+            "question": "A company's security policy requires that all data stored in Amazon S3 must be encrypted using keys that are managed on-premises. Which encryption method should the company use?",
+            "options": [
+                "Server-side encryption with Amazon S3 managed keys (SSE-S3)",
+                "Server-side encryption with AWS KMS managed keys (SSE-KMS)",
+                "Server-side encryption with customer-provided keys (SSE-C)",
+                "Client-side encryption"
+            ],
+            "answer": [2],
+            "explanation": "Server-side encryption with customer-provided keys (SSE-C) allows you to manage your encryption keys on-premises and provide them to AWS for encrypting data at rest."
+        },
+        {
+            "question": "A company needs to implement a resilient architecture for its application hosted on EC2 instances across multiple Availability Zones. Which services should the solutions architect recommend? (Select TWO.)",
+            "options": [
+                "Amazon Route 53 with weighted routing",
+                "Elastic Load Balancer (ELB)",
+                "Amazon RDS with Multi-AZ deployment",
+                "AWS CloudTrail",
+                "Amazon S3 with Cross-Region Replication"
+            ],
+            "answer": [1, 2],
+            "explanation": "An Elastic Load Balancer (ELB) distributes incoming traffic across multiple targets, such as EC2 instances, in multiple Availability Zones. Amazon RDS with Multi-AZ deployment provides enhanced availability and durability for database instances."
+        },
+        {
+            "question": "A company needs to allow a VPC's private subnets to access AWS services without using public IP addresses. Which solution should the company implement?",
+            "options": [
+                "NAT Gateway",
+                "VPC Peering",
+                "AWS Direct Connect",
+                "VPC Endpoint"
+            ],
+            "answer": [3],
+            "explanation": "A VPC endpoint enables you to privately connect your VPC to supported AWS services without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection."
+        },
+        {
+            "question": "A company is using Amazon RDS for a high-traffic OLTP database. To improve read performance, they want to offload read traffic from the primary database. What solution should the company implement?",
+            "options": [
+                "Use Amazon ElastiCache",
+                "Create Read Replicas",
+                "Enable Multi-AZ deployment",
+                "Use Amazon DynamoDB"
+            ],
+            "answer": [1],
+            "explanation": "Creating Read Replicas allows you to offload read traffic from the primary database, improving read performance and reducing the load on the primary instance."
+        },
+        {
+            "question": "A company is designing a data storage solution that optimizes cost for infrequently accessed data while maintaining rapid access when needed. Which Amazon S3 storage class should be used?",
+            "options": [
+                "S3 Standard",
+                "S3 Intelligent-Tiering",
+                "S3 Standard-IA",
+                "S3 One Zone-IA"
+            ],
+            "answer": [2],
+            "explanation": "S3 Standard-IA (Infrequent Access) is designed for data that is accessed less frequently but requires rapid access when needed. It offers lower storage costs compared to S3 Standard."
+        },
+        {
+            "question": "A company's application needs to process a large number of transactions with minimal latency. The workload requires both high read and write throughput. Which AWS service is best suited for this requirement?",
+            "options": [
+                "Amazon Aurora",
+                "Amazon Redshift",
+                "Amazon DynamoDB",
+                "Amazon RDS"
+            ],
+            "answer": [2],
+            "explanation": "Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. It is designed to handle high throughput for both read and write operations."
+        },
+        {
+            "question": "A company has a distributed microservices architecture using Amazon ECS. They need a solution to centralize logging from all the microservices. Which AWS service should they use?",
+            "options": [
+                "AWS CloudTrail",
+                "Amazon CloudWatch Logs",
+                "Amazon Kinesis",
+                "AWS X-Ray"
+            ],
+            "answer": [1],
+            "explanation": "Amazon CloudWatch Logs can be used to collect and store logs from your microservices running in Amazon ECS, providing centralized logging."
+        },
+        {
+            "question": "A company wants to automate the deployment of their application to AWS, including launching EC2 instances, configuring security groups, and deploying application code. Which AWS service should they use?",
+            "options": [
+                "AWS CloudFormation",
+                "AWS Elastic Beanstalk",
+                "AWS CodeDeploy",
+                "AWS OpsWorks"
+            ],
+            "answer": [1],
+            "explanation": "AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services. It handles the deployment, from capacity provisioning, load balancing, and auto-scaling to application health monitoring."
+        },
+        {
+            "question": "A company is running a mission-critical application on a single Amazon EC2 instance. To ensure high availability, what should the solutions architect recommend?",
+            "options": [
+                "Enable EC2 Auto Scaling",
+                "Create a second EC2 instance in the same Availability Zone",
+                "Create an Amazon RDS Multi-AZ DB instance",
+                "Deploy the application across multiple Availability Zones"
+            ],
+            "answer": [3],
+            "explanation": "Deploying the application across multiple Availability Zones ensures high availability and fault tolerance, as it protects against a failure in a single Availability Zone."
+        },
+        {
+            "question": "A company needs to securely store and manage access to its configuration files in AWS. Which service should they use to achieve this?",
+            "options": [
+                "Amazon S3",
+                "AWS Systems Manager Parameter Store",
+                "AWS Secrets Manager",
+                "Amazon EFS"
+            ],
+            "answer": [1],
+            "explanation": "AWS Systems Manager Parameter Store provides secure, hierarchical storage for configuration data management and secrets management."
+        },
+        {
+            "question": "A company needs to design a cost-optimized solution for storing petabytes of archive data that is infrequently accessed. Which Amazon S3 storage class should they choose?",
+            "options": [
+                "S3 Standard",
+                "S3 Intelligent-Tiering",
+                "S3 Glacier",
+                "S3 One Zone-IA"
+            ],
+            "answer": [2],
+            "explanation": "S3 Glacier is a secure, durable, and low-cost storage class for data archiving and long-term backup. It is designed for infrequently accessed data."
+        },
+        {
+            "question": "A company needs to ensure compliance with their internal security policies by regularly auditing their AWS infrastructure. Which AWS service can provide a history of API calls made to their AWS account?",
+            "options": [
+                "AWS CloudTrail",
+                "Amazon CloudWatch",
+                "AWS Config",
+                "AWS Trusted Advisor"
+            ],
+            "answer": [0],
+            "explanation": "AWS CloudTrail records AWS API calls for your account and delivers log files to you, enabling governance, compliance, and operational and risk auditing of your AWS account."
+        },
+        {
+            "question": "A company has multiple AWS accounts and wants to consolidate billing to take advantage of volume pricing discounts. Which AWS service should they use?",
+            "options": [
+                "AWS Organizations",
+                "AWS Budgets",
+                "AWS Cost Explorer",
+                "AWS Trusted Advisor"
+            ],
+            "answer": [0],
+            "explanation": "AWS Organizations allows you to consolidate multiple AWS accounts into an organization that you create and centrally manage, enabling you to benefit from volume pricing discounts."
+        }
+    ]
+    
