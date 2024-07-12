@@ -32,8 +32,9 @@
     <h1>AWS Practice Quiz</h1>
     <div id="quiz-container"></div>
     <button id="back-button" style="display:none;">Back</button>
-    <button id="next-button">Next</button>
-    <button id="submit-button" style="display:none;">Submit</button>
+    <button id="submit-answer-button">Submit Answer</button>
+    <button id="next-button" style="display:none;">Next</button>
+    <button id="submit-button" style="display:none;">Submit Quiz</button>
     <div class="result" id="result-container"></div>
     <button id="restart-button" style="display:none;">Restart</button>
     
@@ -45,6 +46,7 @@
         const resultContainer = document.getElementById('result-container');
         const nextButton = document.getElementById('next-button');
         const backButton = document.getElementById('back-button');
+        const submitAnswerButton = document.getElementById('submit-answer-button');
         const submitButton = document.getElementById('submit-button');
         const restartButton = document.getElementById('restart-button');
 
@@ -77,8 +79,26 @@
                 div.style.display = i === index ? 'block' : 'none';
             });
             backButton.style.display = index === 0 ? 'none' : 'inline';
-            nextButton.style.display = index === questions.length - 1 ? 'none' : 'inline';
+            submitAnswerButton.style.display = 'inline';
+            nextButton.style.display = 'none';
             submitButton.style.display = index === questions.length - 1 ? 'inline' : 'none';
+        }
+
+        function checkAnswer() {
+            const checkboxes = document.querySelectorAll(`input[name="question${currentQuestionIndex}"]:checked`);
+            const userAnswers = Array.from(checkboxes).map(cb => parseInt(cb.value));
+            const isCorrect = JSON.stringify(userAnswers.sort()) === JSON.stringify(questions[currentQuestionIndex].answer.sort());
+            const explanations = document.getElementById(`explanation${currentQuestionIndex}`);
+            explanations.style.display = 'block';
+
+            if (isCorrect) {
+                explanations.classList.add('correct');
+                submitAnswerButton.style.display = 'none';
+                nextButton.style.display = 'inline';
+            } else {
+                explanations.classList.add('incorrect');
+                explanations.innerHTML += " Please try again.";
+            }
         }
 
         function showResults() {
@@ -105,8 +125,9 @@
             loadQuiz();
             showQuestion(currentQuestionIndex);
             restartButton.style.display = 'none';
-            nextButton.style.display = 'inline';
+            nextButton.style.display = 'none';
             submitButton.style.display = 'none';
+            submitAnswerButton.style.display = 'inline';
         }
 
         nextButton.addEventListener('click', () => {
@@ -119,11 +140,14 @@
             showQuestion(currentQuestionIndex);
         });
 
+        submitAnswerButton.addEventListener('click', checkAnswer);
+
         submitButton.addEventListener('click', () => {
             showResults();
             submitButton.style.display = 'none';
             nextButton.style.display = 'none';
             backButton.style.display = 'none';
+            submitAnswerButton.style.display = 'none';
             restartButton.style.display = 'inline';
         });
 
@@ -133,4 +157,3 @@
     </script>
 </body>
 </html>
-
