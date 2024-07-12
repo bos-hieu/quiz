@@ -94,7 +94,7 @@
                 answerDiv.classList.add('answer');
                 answerDiv.innerHTML = `
                     <p>${index + 1}. ${q.question}</p>
-                    ${q.options.map((option, i) => `<p>${String.fromCharCode(65 + i)}. ${option}</p>`).join('')}
+                    ${q.options.map((option, i) => `<p class="${q.answer.includes(i) ? 'correct-answer' : ''}">${String.fromCharCode(65 + i)}. ${option}</p>`).join('')}
                     <p><strong>Correct Answer: ${q.answer.map(a => String.fromCharCode(65 + a)).join(', ')}</strong></p>
                     <p>${q.explanation}</p>
                 `;
