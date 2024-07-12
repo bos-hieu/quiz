@@ -340,6 +340,179 @@
             ],
             "answer": [0],
             "explanation": "AWS Organizations allows you to consolidate multiple AWS accounts into an organization that you create and centrally manage, enabling you to benefit from volume pricing discounts."
-        }
-    ]
-    
+        },
+    {
+        "question": "Which Amazon EC2 pricing model should be used for applications with steady-state usage?",
+        "options": [
+            "On-Demand Instances",
+            "Spot Instances",
+            "Reserved Instances",
+            "Dedicated Hosts"
+        ],
+        "answer": [2],
+        "explanation": "Reserved Instances are suitable for applications with steady-state usage as they offer significant cost savings over On-Demand pricing."
+    },
+    {
+        "question": "Which AWS service can be used to run containerized applications without managing servers or clusters of Amazon EC2 instances?",
+        "options": [
+            "Amazon ECS",
+            "AWS Lambda",
+            "Amazon EKS",
+            "AWS Fargate"
+        ],
+        "answer": [3],
+        "explanation": "AWS Fargate is a serverless compute engine for containers that works with both Amazon ECS and Amazon EKS."
+    },
+    {
+        "question": "A company needs to run a batch job on Amazon EC2 that can tolerate interruptions and requires cost optimization. Which EC2 instance type should be used? (Select TWO.)",
+        "options": [
+            "On-Demand Instances",
+            "Spot Instances",
+            "Reserved Instances",
+            "Dedicated Hosts",
+            "EC2 Fleet"
+        ],
+        "answer": [1, 4],
+        "explanation": "Spot Instances offer cost savings and are suitable for batch jobs that can tolerate interruptions. EC2 Fleet allows you to use a combination of instance types and pricing options."
+    },
+    {
+        "question": "Which features does Amazon EC2 Auto Scaling provide to help maintain application availability? (Select TWO.)",
+        "options": [
+            "Scaling horizontally by adding more instances",
+            "Scaling vertically by increasing instance size",
+            "Automatic scaling based on demand",
+            "Managed databases",
+            "Automated code deployments"
+        ],
+        "answer": [0, 2],
+        "explanation": "Amazon EC2 Auto Scaling helps maintain application availability by automatically adding or removing instances based on demand."
+    },
+    {
+        "question": "A company wants to ensure high availability for its web application hosted on Amazon EC2. Which options should they configure? (Select TWO.)",
+        "options": [
+            "Deploy instances across multiple Availability Zones",
+            "Use Spot Instances",
+            "Configure Auto Scaling groups",
+            "Enable Multi-AZ for RDS",
+            "Use Dedicated Hosts"
+        ],
+        "answer": [0, 2],
+        "explanation": "Deploying instances across multiple Availability Zones and using Auto Scaling groups are key strategies for ensuring high availability."
+    },
+    {
+        "question": "Which Amazon S3 storage class is designed for data that is accessed less frequently but requires rapid access when needed?",
+        "options": [
+            "S3 Standard",
+            "S3 Intelligent-Tiering",
+            "S3 Standard-IA",
+            "S3 One Zone-IA"
+        ],
+        "answer": [2],
+        "explanation": "S3 Standard-IA (Infrequent Access) is designed for data that is accessed less frequently but requires rapid access when needed."
+    },
+    {
+        "question": "Which AWS service provides a fully managed file system that can be mounted by on-premises servers and AWS resources?",
+        "options": [
+            "Amazon S3",
+            "Amazon EBS",
+            "Amazon EFS",
+            "AWS Storage Gateway"
+        ],
+        "answer": [3],
+        "explanation": "AWS Storage Gateway provides a hybrid cloud storage service that enables on-premises applications to use AWS cloud storage."
+    },
+    {
+        "question": "A company needs a storage solution for static website hosting. Which Amazon S3 features should they configure? (Select TWO.)",
+        "options": [
+            "Bucket policy to allow public read access",
+            "S3 Object Lock",
+            "Versioning",
+            "Website hosting configuration",
+            "Cross-Region Replication"
+        ],
+        "answer": [0, 3],
+        "explanation": "To host a static website on Amazon S3, configure the bucket policy to allow public read access and enable the website hosting configuration."
+    },
+    {
+        "question": "Which features does Amazon S3 provide to ensure data durability and availability? (Select TWO.)",
+        "options": [
+            "Automatic scaling",
+            "Cross-Region Replication",
+            "Multi-AZ storage",
+            "Lifecycle policies",
+            "Versioning"
+        ],
+        "answer": [2, 4],
+        "explanation": "Amazon S3 ensures data durability and availability with Multi-AZ storage and versioning."
+    },
+    {
+        "question": "A company needs to move large amounts of data from their on-premises data center to AWS quickly and securely. Which services can they use? (Select TWO.)",
+        "options": [
+            "AWS Snowball",
+            "AWS DataSync",
+            "Amazon S3 Transfer Acceleration",
+            "AWS Direct Connect",
+            "AWS Storage Gateway"
+        ],
+        "answer": [0, 1],
+        "explanation": "AWS Snowball and AWS DataSync are designed for moving large amounts of data quickly and securely to AWS."
+    },
+    {
+        "question": "Which Amazon RDS feature provides high availability and failover support for database instances?",
+        "options": [
+            "Read Replicas",
+            "Multi-AZ Deployment",
+            "Reserved Instances",
+            "Automated Backups"
+        ],
+        "answer": [1],
+        "explanation": "Multi-AZ Deployment provides high availability and failover support for Amazon RDS database instances."
+    },
+    {
+        "question": "Which AWS service is a fully managed NoSQL database that provides fast and predictable performance with seamless scalability?",
+        "options": [
+            "Amazon RDS",
+            "Amazon DynamoDB",
+            "Amazon Redshift",
+            "Amazon Aurora"
+        ],
+        "answer": [1],
+        "explanation": "Amazon DynamoDB is a fully managed NoSQL database that provides fast and predictable performance with seamless scalability."
+    },
+    {
+        "question": "A company needs to improve the read performance of their Amazon RDS database. Which options should they consider? (Select TWO.)",
+        "options": [
+            "Create Read Replicas",
+            "Enable Multi-AZ deployment",
+            "Increase instance size",
+            "Enable automated backups",
+            "Use provisioned IOPS storage"
+        ],
+        "answer": [0, 2],
+        "explanation": "Creating Read Replicas and increasing the instance size can improve the read performance of an Amazon RDS database."
+    },
+    {
+        "question": "Which features does Amazon Aurora provide to enhance database performance and availability? (Select TWO.)",
+        "options": [
+            "Global Databases",
+            "Cross-Region Replication",
+            "Parallel Query",
+            "DAX (DynamoDB Accelerator)",
+            "Automatic scaling"
+        ],
+        "answer": [0, 2],
+        "explanation": "Amazon Aurora enhances database performance and availability with features like Global Databases and Parallel Query."
+    },
+    {
+        "question": "A company is running an Amazon RDS database instance with a high read traffic load. Which solutions can help distribute the read traffic? (Select TWO.)",
+        "options": [
+            "Multi-AZ deployment",
+            "Read Replicas",
+            "Elastic Load Balancer",
+            "Amazon ElastiCache",
+            "Amazon CloudFront"
+        ],
+        "answer": [1, 3],
+        "explanation": "Read Replicas and Amazon ElastiCache can help distribute the read traffic load for an Amazon RDS database instance."
+    }
+]
