@@ -1,0 +1,92 @@
+const questions = [
+    {
+        question: "A company needs to ensure secure access to its AWS resources across multiple accounts. They want to implement a role-based access control strategy and manage permissions efficiently. Which services and practices should they use? (Select TWO.)",
+        options: ["AWS Identity and Access Management (IAM)", "Amazon GuardDuty", "AWS Single Sign-On (AWS SSO)", "AWS Secrets Manager", "Amazon Macie"],
+        answer: [0, 2],
+        explanation: "IAM is essential for managing access to AWS services and resources securely. AWS SSO is used to manage SSO access and user permissions across multiple AWS accounts centrally."
+    },
+    {
+        question: "A company is designing a VPC architecture with private and public subnets. The EC2 instances in the private subnet need to connect to the internet to download software patches but should not be directly accessible from the internet. What should be done to allow the EC2 instances to download patches securely? (Select TWO.)",
+        options: ["Assign Elastic IP addresses to the EC2 instances.", "Configure a NAT gateway in a public subnet.", "Define a custom route table with a route to the NAT gateway for internet traffic and associate it with the private subnets.", "Configure a VPN connection.", "Use an internet gateway in the private subnet."],
+        answer: [1, 2],
+        explanation: "A NAT gateway allows instances in a private subnet to connect to the internet or other AWS services. The custom route table ensures that the traffic from the instances in the private subnets is routed through the NAT gateway for internet access."
+    },
+    {
+        question: "A company needs to ensure that their data stored in Amazon S3 is encrypted at rest using encryption keys stored on-premises. Which of the following options meet this requirement? (Select TWO.)",
+        options: ["Use server-side encryption with Amazon S3 managed encryption keys (SSE-S3).", "Use server-side encryption with AWS KMS managed encryption keys (SSE-KMS).", "Use server-side encryption with customer-provided encryption keys (SSE-C).", "Use client-side encryption to provide at-rest encryption.", "Use an AWS Lambda function invoked by Amazon S3 events to encrypt the data using the customer’s keys."],
+        answer: [2, 3],
+        explanation: "SSE-C allows you to manage your encryption keys on-premises and provide them to AWS for encrypting data at rest. With client-side encryption, data is encrypted by the client before it is uploaded to Amazon S3. The keys are managed and stored on-premises."
+    },
+    {
+        question: "A company wants to design a highly available and fault-tolerant architecture for its web application. The application runs on EC2 instances in a single Availability Zone (AZ). Which steps should a solutions architect take to provide high availability? (Select TWO.)",
+        options: ["Create new public and private subnets in the same AZ.", "Create an Amazon EC2 Auto Scaling group and Application Load Balancer spanning multiple AZs for the web application instances.", "Add the existing web application instances to an Auto Scaling group behind an Application Load Balancer.", "Create new public and private subnets in a new AZ. Create a database using an EC2 instance in the public subnet in the new AZ. Migrate the old database contents to the new database.", "Create new public and private subnets in the same VPC, each in a new AZ. Create an Amazon RDS Multi-AZ DB instance in the private subnets. Migrate the old database contents to the new DB instance."],
+        answer: [1, 2],
+        explanation: "Creating an Auto Scaling group and Application Load Balancer spanning multiple AZs ensures that the web application instances are distributed across multiple Availability Zones, providing high availability and fault tolerance. Adding the existing web application instances to an Auto Scaling group behind an Application Load Balancer further enhances high availability by automatically scaling the number of instances based on demand and distributing incoming traffic evenly."
+    },
+    {
+        question: "A company runs a public-facing three-tier web application in a VPC across multiple Availability Zones. The application tier EC2 instances running in private subnets need to download software patches from the internet. The instances cannot be directly accessible from the internet. Which actions should be taken to allow the EC2 instances to download the needed patches? (Select TWO.)",
+        options: ["Assign Elastic IP addresses to the EC2 instances.", "Configure a NAT gateway in a public subnet.", "Define a custom route table with a route to the NAT gateway for internet traffic and associate it with the private subnets for the application tier.", "Configure a VPN connection.", "Use an internet gateway in the private subnet."],
+        answer: [1, 2],
+        explanation: "A NAT gateway allows instances in a private subnet to connect to the internet or other AWS services while preventing the internet from initiating a connection with those instances. The custom route table ensures that the traffic from the instances in the private subnets is routed through the NAT gateway for internet access."
+    },
+    {
+        question: "A company needs to ensure secure workloads and applications by controlling ports, protocols, and network traffic on AWS. Which services and features should they use? (Select TWO.)",
+        options: ["Security Groups", "Amazon CloudFront", "Network ACLs", "AWS Direct Connect", "Amazon S3"],
+        answer: [0, 2],
+        explanation: "Security Groups act as virtual firewalls for your instances to control inbound and outbound traffic. They operate at the instance level. Network ACLs provide an additional layer of security that acts at the subnet level, controlling traffic to and from one or more subnets."
+    },
+    {
+        question: "A company wants to design a resilient architecture that automatically scales based on traffic. The company is using a web application hosted on Amazon EC2 instances. What should the solutions architect recommend to meet these requirements? (Select TWO.)",
+        options: ["Use Amazon EC2 Auto Scaling.", "Use AWS CloudTrail to monitor scaling events.", "Use an Application Load Balancer (ALB).", "Use Amazon CloudWatch for logging.", "Use AWS Config to track configuration changes."],
+        answer: [0, 2],
+        explanation: "Auto Scaling ensures that the number of Amazon EC2 instances increases or decreases automatically based on traffic demands, providing resilience and scalability. An ALB distributes incoming application traffic across multiple targets, such as EC2 instances, to ensure high availability and fault tolerance."
+    },
+    {
+        question: "A company is using Amazon EC2 Reserved Instances to run its data processing workload. The nightly job typically takes 7 hours to run and must finish within a 10-hour time window. The company anticipates temporary increases in demand at the end of each month that will cause the job to run over the time limit with the capacity of the current resources. Once started, the processing job cannot be interrupted before completion. The company wants to implement a solution that would provide increased resource capacity as cost-effectively as possible. What should a solutions architect do to accomplish this?",
+        options: ["Deploy On-Demand Instances during periods of high demand.", "Create a second EC2 reservation for additional instances.", "Deploy Spot Instances during periods of high demand.", "Increase the EC2 instance size in the EC2 reservation to support the increased workload."],
+        answer: [0],
+        explanation: "On-Demand Instances allow you to pay for compute capacity by the hour or second with no long-term commitments. They are suitable for workloads that cannot be interrupted and need to scale up temporarily to meet demand spikes, providing a flexible and cost-effective solution."
+    },
+    {
+        question: "A company runs an online voting system for a weekly live television program. During broadcasts, users submit hundreds of thousands of votes within minutes to a front-end fleet of Amazon EC2 instances that run in an Auto Scaling group. The EC2 instances write the votes to an Amazon RDS database. However, the database is unable to keep up with the requests that come from the EC2 instances. A solutions architect must design a solution that processes the votes in the most efficient manner and without downtime. What should the solutions architect do to meet these requirements?",
+        options: ["Migrate the front-end application to AWS Lambda. Use Amazon API Gateway to route user requests to the Lambda functions.", "Scale the database horizontally by converting it to a Multi-AZ deployment. Configure the front-end application to write to both the primary and secondary DB instances.", "Configure the front-end application to send votes to an Amazon Simple Queue Service (Amazon SQS) queue. Provision worker instances to read the SQS queue and write the vote information to the database.", "Use Amazon EventBridge (Amazon CloudWatch Events) to create a scheduled event to re-provision the database with larger, memory optimized instances during voting periods. When voting ends, re-provision the database to use smaller instances."],
+        answer: [2],
+        explanation: "This approach decouples the ingestion of votes from the database, allowing the voting system to continue processing votes without waiting for the database writes. Worker instances can process votes from the SQS queue at a rate the database can handle, ensuring no votes are lost and the system remains responsive."
+    },
+    {
+        question: "An application running on AWS uses an Amazon Aurora Multi-AZ DB cluster deployment for its database. When evaluating performance metrics, a solutions architect discovered that the database reads are causing high I/O and adding latency to the write requests against the database. What should the solutions architect do to separate the read requests from the write requests?",
+        options: ["Enable read-through caching on the Aurora database.", "Update the application to read from the Multi-AZ standby instance.", "Create an Aurora read replica and modify the application to use the appropriate endpoints.", "Create a second Aurora database and link it to the primary database as a read replica."],
+        answer: [2],
+        explanation: "Creating an Aurora read replica provides a way to offload read traffic from the primary instance, reducing the read I/O load on the primary database and improving the overall performance by separating read and write operations. Aurora replicas share the same underlying storage as the main database, ensuring minimal lag."
+    },
+    {
+        question: "A company is designing a high-performing and scalable network architecture. They need to ensure that their network can scale to accommodate future needs and provide low latency for end users. Which services and features should they use? (Select TWO.)",
+        options: ["Amazon CloudFront", "AWS Direct Connect", "AWS Transit Gateway", "AWS Global Accelerator", "AWS VPN"],
+        answer: [0, 3],
+        explanation: "Amazon CloudFront is a content delivery network (CDN) that provides low latency and high transfer speeds by caching content at edge locations around the world. AWS Global Accelerator improves the availability and performance of applications with users globally by routing traffic through the AWS global network and optimizing the path to your application."
+    },
+    {
+        question: "A company is designing cost-optimized storage solutions for its data. They need to manage data lifecycle policies and ensure cost-effectiveness. Which AWS services and features should they use? (Select TWO.)",
+        options: ["Amazon S3 Lifecycle Policies", "AWS Snowball", "Amazon S3 Glacier", "Amazon FSx", "Amazon RDS"],
+        answer: [0, 2],
+        explanation: "S3 Lifecycle Policies allow you to automate the transition of objects to different storage classes, such as moving data to cheaper storage options like S3 Glacier or deleting data after a specified period. S3 Glacier is a low-cost storage service designed for data archiving and long-term backup. It offers cost-effective storage for infrequently accessed data."
+    },
+    {
+        question: "A company is experiencing high I/O and latency issues with its Amazon Aurora database due to read operations. They need to improve read performance without impacting write operations. What should the solutions architect recommend?",
+        options: ["Enable read-through caching on the Aurora database.", "Update the application to read from the Multi-AZ standby instance.", "Create an Aurora read replica and modify the application to use the appropriate endpoints.", "Create a second Aurora database and link it to the primary database as a read replica."],
+        answer: [2],
+        explanation: "Creating an Aurora read replica provides a way to offload read traffic from the primary instance, reducing the read I/O load on the primary database and improving the overall performance by separating read and write operations. Aurora replicas share the same underlying storage as the main database, ensuring minimal lag."
+    },
+    {
+        question: "A company needs to design a secure and resilient architecture for its critical applications. The applications require multi-region failover capability and secure access to AWS resources. Which of the following solutions should the solutions architect implement? (Select TWO.)",
+        options: ["Use Amazon Route 53 for DNS failover across multiple regions.", "Use AWS Direct Connect for secure access to AWS resources.", "Implement AWS IAM roles and policies for access management.", "Use Amazon CloudFront for content delivery across multiple regions.", "Deploy the applications using AWS Elastic Beanstalk in multiple regions."],
+        answer: [0, 2],
+        explanation: "Amazon Route 53 is a highly available and scalable DNS web service that can route end-user requests to endpoints in multiple regions, providing multi-region failover capabilities. AWS IAM roles and policies are essential for securely managing access to AWS resources. They help ensure that users and applications have the necessary permissions while adhering to the principle of least privilege."
+    },
+    {
+        question: "A company needs to design a high-performing and scalable database solution. The database will handle a high volume of read and write operations and must scale seamlessly. Which AWS service should the solutions architect recommend?",
+        options: ["Amazon RDS for MySQL", "Amazon DynamoDB", "Amazon Aurora", "Amazon Redshift"],
+        answer: [1],
+        explanation: "DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. It is designed to handle high volumes of read and write operations, making it suitable for applications that require low-latency data access at any scale."
+    }
+];
