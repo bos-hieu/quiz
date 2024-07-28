@@ -1,26 +1,5 @@
 [
     {
-        "question": "Why is it challenging to apply diffusion models to text generation?",
-        "options": [
-            "Because text representation is categorical unlike images",
-            "Because text generation does not require complex models",
-            "Because text is not categorical",
-            "Because diffusion models can only produce images"
-        ],
-        "correct_answer": "Because text representation is categorical unlike images",
-        "explanation": "Diffusion models work well with continuous data, where the process involves gradually adding noise to the data and then learning to reverse this process. In image generation, this works well because pixel values are inherently continuous. Text data, on the other hand, is discrete and categorical; words are symbols that come from a fixed vocabulary and they can't be meaningfully interpolated like pixel values. This discreteness means that you can't directly apply the same gradual noise and denoising process that works for images."
-    },
-    {
-        "question": "What is LangChain?",
-        "options": [
-            "A JavaScript library for natural language processing",
-            "A Ruby library for text generation",
-            "A Java library for text summarization",
-            "A Python library for building applications with Large Language Models"
-        ],
-        "correct_answer": "A Python library for building applications with Large Language Models"
-    },
-    {
         "question": "Which statement is true about Fine-tuning and Parameter-Efficient Fine-Tuning (PEFT)?",
         "options": [
             "Fine-tuning and PEFT do not involve model modification; they differ only in the type of data used for training, with Fine-tuning requiring labeled data and PEFT using unlabeled data.",
@@ -28,17 +7,19 @@
             "PEFT requires replacing the entire model architecture with a new one designed specifically for the new task, making it significantly more data-intensive than Fine-tuning.",
             "Both Fine-tuning and PEFT require the model to be trained from scratch on new data, making them equally data and computationally intensive."
         ],
-        "correct_answer": "Fine-tuning requires training the entire model on new data, often leading to substantial computational costs, whereas PEFT involves updating only a small subset of parameters, minimizing computational requirements and data needs."
+        "answer": [1],
+        "explanation": "Fine-tuning requires training the entire model on new data, which is computationally expensive. PEFT updates only a small subset of parameters, reducing computational requirements."
     },
     {
         "question": "What does a cosine distance of 0 indicate about the relationship between two embeddings?",
         "options": [
-            "They are completely dissimilar",
-            "They are unrelated",
-            "They have the same magnitude",
-            "They are similar in direction"
+            "They are completely dissimilar.",
+            "They are unrelated.",
+            "They have the same magnitude.",
+            "They are similar in direction."
         ],
-        "correct_answer": "They are similar in direction"
+        "answer": [3],
+        "explanation": "A cosine distance of 0 indicates that the two embeddings are similar in direction, meaning they point in the same direction in the vector space."
     },
     {
         "question": "What does the RAG Sequence model do in the context of generating a response?",
@@ -48,17 +29,19 @@
             "It retrieves a single relevant document for the entire input query and generates a response based on that alone.",
             "For each input query, it retrieves a set of relevant documents and considers them together to generate a cohesive response."
         ],
-        "correct_answer": "For each input query, it retrieves a set of relevant documents and considers them together to generate a cohesive response."
+        "answer": [3],
+        "explanation": "RAG Sequence retrieves a set of relevant documents for each input query and considers them together to generate a cohesive response."
     },
     {
-        "question": "Given the following code block: history = StreamlitChatMessageHistory(key=\"chat_messages\")\nmemory = ConversationBufferMemory(chat_memory=history)\n\nWhich statement is NOT true about StreamlitChatMessageHistory?",
+        "question": "Given the following code block: history = StreamlitChatMessageHistory(key=\"chat_messages\") memory = ConversationBufferMemory(chat_memory=history) Which statement is NOT true about StreamlitChatMessageHistory?",
         "options": [
             "A given StreamlitChatMessageHistory will NOT be persisted.",
             "StreamlitChatMessageHistory will store messages in Streamlit session state at the specified key.",
             "StreamlitChatMessageHistory can be used in any type of LLM application.",
             "A given StreamlitChatMessageHistory will not be shared across user sessions."
         ],
-        "correct_answer": "StreamlitChatMessageHistory will store messages in Streamlit session state at the specified key."
+        "answer": [2],
+        "explanation": "StreamlitChatMessageHistory can be used in any type of LLM application, which is true. The statement 'A given StreamlitChatMessageHistory will NOT be persisted' is not true."
     },
     {
         "question": "What does accuracy measure in the context of fine-tuning results for a generative model?",
@@ -68,17 +51,19 @@
             "How many predictions the model made correctly out of all the predictions in an evaluation",
             "The depth of the neural network layers used in the model"
         ],
-        "correct_answer": "How many predictions the model made correctly out of all the predictions in an evaluation"
+        "answer": [2],
+        "explanation": "Accuracy measures how many predictions the model made correctly out of all the predictions in an evaluation."
     },
     {
-        "question": "How can the concept of \"Groundedness\" differ from \"Answer Relevance\" in the context of Retrieval Augmented Generation (RAG)?",
+        "question": "How can the concept of 'Groundedness' differ from 'Answer Relevance' in the context of Retrieval Augmented Generation (RAG)?",
         "options": [
             "Groundedness measures relevance to the user query, whereas Answer Relevance evaluates data integrity.",
             "Groundedness pertains to factual correctness, whereas Answer Relevance concerns query relevance.",
             "Groundedness refers to contextual alignment, whereas Answer Relevance deals with syntactic accuracy.",
             "Groundedness focuses on data integrity, whereas Answer Relevance emphasizes lexical diversity."
         ],
-        "correct_answer": "Groundedness pertains to factual correctness, whereas Answer Relevance concerns query relevance."
+        "answer": [1],
+        "explanation": "Groundedness pertains to factual correctness, whereas Answer Relevance concerns query relevance."
     },
     {
         "question": "What do prompt templates use for templating in language model applications?",
@@ -88,7 +73,8 @@
             "Python's str.format syntax",
             "Python's list comprehension syntax"
         ],
-        "correct_answer": "Python's str.format syntax"
+        "answer": [2],
+        "explanation": "Prompt templates use Python's str.format syntax for templating in language model applications."
     },
     {
         "question": "When is fine-tuning an appropriate method for customizing a Large Language Model (LLM)?",
@@ -98,7 +84,8 @@
             "When the LLM requires access to the latest data for generating outputs",
             "When you want to optimize the model without any instructions"
         ],
-        "correct_answer": "When the LLM does not perform well on a task and the data for prompt engineering is too large"
+        "answer": [0],
+        "explanation": "Fine-tuning is appropriate when the LLM does not perform well on a task and the data for prompt engineering is too large."
     },
     {
         "question": "How does a presence penalty function in language model generation?",
@@ -108,7 +95,8 @@
             "It penalizes all tokens equally, regardless of how often they have appeared.",
             "It penalizes only tokens that have never appeared in the text before."
         ],
-        "correct_answer": "It penalizes a token each time it appears after the first occurrence."
+        "answer": [0],
+        "explanation": "A presence penalty penalizes a token each time it appears after the first occurrence."
     },
     {
         "question": "Which is a characteristic of T-Few fine-tuning for Large Language Models (LLMs)?",
@@ -118,7 +106,8 @@
             "It does not update any weights but restructures the model architecture.",
             "It selectively updates only a fraction of the model's weights."
         ],
-        "correct_answer": "It selectively updates only a fraction of the model's weights."
+        "answer": [3],
+        "explanation": "T-Few fine-tuning selectively updates only a fraction of the model's weights."
     },
     {
         "question": "How are documents usually evaluated in the simplest form of keyword-based search?",
@@ -128,7 +117,8 @@
             "By the complexity of language used in the documents",
             "Based on the number of images and videos contained in the documents"
         ],
-        "correct_answer": "Based on the presence and frequency of the user-provided keywords"
+        "answer": [1],
+        "explanation": "Documents are evaluated based on the presence and frequency of the user-provided keywords in the simplest form of keyword-based search."
     },
     {
         "question": "What is the purpose of Retrievers in LangChain?",
@@ -138,7 +128,8 @@
             "To break down complex tasks into smaller steps",
             "To combine multiple components into a single pipeline"
         ],
-        "correct_answer": "To retrieve relevant information from knowledge bases"
+        "answer": [1],
+        "explanation": "Retrievers in LangChain are used to retrieve relevant information from knowledge bases."
     },
     {
         "question": "Which LangChain component is responsible for generating the linguistic output in a chatbot system?",
@@ -148,7 +139,8 @@
             "LangChain Application",
             "Vector Stores"
         ],
-        "correct_answer": "LLMs"
+        "answer": [0],
+        "explanation": "Large Language Models (LLMs) are responsible for generating the linguistic output in a chatbot system."
     },
     {
         "question": "In which scenario is soft prompting appropriate compared to other training styles?",
@@ -158,7 +150,8 @@
             "When the model needs to be adapted to perform well in a domain on which it was not originally trained",
             "When there is a need to add learnable parameters to a Large Language Model (LLM) without task-specific training"
         ],
-        "correct_answer": "When there is a need to add learnable parameters to a Large Language Model (LLM) without task-specific training"
+        "answer": [3],
+        "explanation": "Soft prompting is appropriate when there is a need to add learnable parameters to a Large Language Model (LLM) without task-specific training."
     },
     {
         "question": "In the context of generating text with a Large Language Model (LLM), what does the process of greedy decoding entail?",
@@ -168,7 +161,8 @@
             "Picking a word based on its position in a sentence structure",
             "Using a weighted random selection based on a modulated distribution"
         ],
-        "correct_answer": "Choosing the word with the highest probability at each step of decoding"
+        "answer": [0],
+        "explanation": "Greedy decoding involves choosing the word with the highest probability at each step of decoding."
     },
     {
         "question": "Accuracy in vector databases contributes to the effectiveness of Large Language Models (LLMs) by preserving a specific type of relationship. What is the nature of these relationships, and why are they crucial for language models?",
@@ -178,7 +172,8 @@
             "Semantic relationships; crucial for understanding context and generating precise language",
             "Linear relationships; they simplify the modeling process"
         ],
-        "correct_answer": "Semantic relationships; crucial for understanding context and generating precise language"
+        "answer": [2],
+        "explanation": "Semantic relationships in vector databases are crucial for understanding context and generating precise language, making them essential for the effectiveness of Large Language Models (LLMs)."
     },
     {
         "question": "In the simplified workflow for managing and querying vector data, what is the role of indexing?",
@@ -188,7 +183,8 @@
             "To compress vector data for minimized storage usage",
             "To map vectors to a data structure for faster searching, enabling efficient retrieval"
         ],
-        "correct_answer": "To map vectors to a data structure for faster searching, enabling efficient retrieval"
+        "answer": [3],
+        "explanation": "Indexing maps vectors to a data structure for faster searching, enabling efficient retrieval."
     },
     {
         "question": "What does the Loss metric indicate about a model's predictions?",
@@ -198,7 +194,8 @@
             "Loss indicates how good a prediction is, and it should increase as the model improves.",
             "Loss describes the accuracy of the right predictions rather than the incorrect ones."
         ],
-        "correct_answer": "Loss is a measure that indicates how wrong the model's predictions are."
+        "answer": [1],
+        "explanation": "Loss is a measure that indicates how wrong the model's predictions are."
     },
     {
         "question": "What is the purpose of Retrieval Augmented Generation (RAG) in text generation?",
@@ -208,7 +205,8 @@
             "To store text in an external database without using it for generation",
             "To generate text based only on the model's internal knowledge without external data"
         ],
-        "correct_answer": "To generate text using extra information obtained from an external data source"
+        "answer": [1],
+        "explanation": "RAG generates text using extra information obtained from an external data source."
     },
     {
         "question": "How does the temperature setting in a decoding algorithm influence the probability distribution over the vocabulary?",
@@ -218,7 +216,8 @@
             "Increasing the temperature removes the impact of the most likely word.",
             "Decreasing the temperature broadens the distribution, making less likely words more probable."
         ],
-        "correct_answer": "Increasing the temperature flattens the distribution, allowing for more varied word choices."
+        "answer": [0],
+        "explanation": "Increasing the temperature flattens the distribution, allowing for more varied word choices."
     },
     {
         "question": "How does the structure of vector databases differ from traditional relational databases?",
@@ -228,7 +227,8 @@
             "It is based on distances and similarities in a vector space.",
             "It is not optimized for high-dimensional spaces."
         ],
-        "correct_answer": "It is based on distances and similarities in a vector space."
+        "answer": [2],
+        "explanation": "Vector databases are based on distances and similarities in a vector space, which is different from the row-based storage of traditional relational databases."
     },
     {
         "question": "Which statement is true about string prompt templates and their capability regarding variables?",
@@ -238,6 +238,7 @@
             "They are unable to use any variables.",
             "They can only support a single variable at a time."
         ],
-        "correct_answer": "They support any number of variables, including the possibility of having none."
+        "answer": [0],
+        "explanation": "String prompt templates support any number of variables, including the possibility of having none."
     }
 ]
