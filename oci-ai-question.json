@@ -240,5 +240,27 @@
         ],
         "answer": [0],
         "explanation": "String prompt templates support any number of variables, including the possibility of having none."
+    },
+    {
+        "question": "What are the benefits of using a tokenizer in natural language processing?",
+        "options": [
+            "It breaks down text into sentences.",
+            "It removes stop words from the text.",
+            "It converts text into numerical representations.",
+            "It breaks down text into individual tokens or words."
+        ],
+        "answer": [3],
+        "explanation": "A tokenizer breaks down text into individual tokens or words, which is essential for natural language processing."
+    },
+    {
+        "question": "What is the main advantage of using transfer learning in deep learning models?",
+        "options": [
+            "It allows models to be trained from scratch on new data.",
+            "It reduces the amount of data and computational resources needed for training.",
+            "It increases the complexity of the models.",
+            "It requires less expertise in the specific domain."
+        ],
+        "answer": [1],
+        "explanation": "Transfer learning reduces the amount of data and computational resources needed for training by leveraging pre-trained models."
     }
 ]
