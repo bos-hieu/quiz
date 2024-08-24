@@ -297,4 +297,28 @@
         "answer": [3],
         "explanation": "Assisted learning is not a recognized type of machine learning; the main types are supervised, unsupervised, and reinforcement learning."
     }
+,
+    {
+        "question": "What is the primary goal of unsupervised learning?",
+        "options": [
+            "To classify labeled data into predefined categories.",
+            "To predict outcomes based on labeled data.",
+            "To find hidden patterns or intrinsic structures in input data.",
+            "To optimize a reward function over time."
+        ],
+        "answer": [2],
+        "explanation": "The primary goal of unsupervised learning is to find hidden patterns or intrinsic structures in input data, without labeled outcomes."
+    },
+    {
+        "question": "What is overfitting in the context of machine learning?",
+        "options": [
+            "When a model performs well on unseen data but poorly on training data.",
+            "When a model is too simple and cannot capture the underlying data patterns.",
+            "When a model performs well on training data but poorly on unseen data.",
+            "When a model ignores the training data altogether."
+        ],
+        "answer": [2],
+        "explanation": "Overfitting occurs when a model performs well on the training data but fails to generalize to unseen data, often due to being too complex."
+    }
 ]
+
