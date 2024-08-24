@@ -18,7 +18,7 @@
             "Is negative feedback given to an agent for each action it takes in a given state.",
             "All of the above."
         ],
-        "answer": [3],
+        "answer": [1],
         "explanation": "The reward in reinforcement learning can be positive or negative feedback given to an agent for each action it takes in a given state."
     },
     {
@@ -189,7 +189,7 @@
             "The ingredients."
         ],
         "answer": [0],
-        "explanation": "In a supervised learning problem, the label would be whether the webpage 'contains a recipe' or 'does not contain a recipe.'"
+        "explanation": "In a supervised learning task, the label would be whether the webpage 'contains a recipe' or 'does not contain a recipe.'"
     },
     {
         "question": "Let’s say you’re trying to predict a child’s shoe size from their age and parents’ shoe sizes. You relax the problem to allow for predictions between shoe sizes. What kind of machine learning task would you use to represent this problem?",
@@ -243,5 +243,58 @@
         ],
         "answer": [0],
         "explanation": "In reinforcement learning, a policy is a strategy or mapping from states to actions that the agent uses to determine its actions."
+    },
+    {
+        "question": "How would you improve the performance of a machine learning model?",
+        "options": [
+            "By collecting more data.",
+            "By reducing the size of the dataset.",
+            "By ignoring outliers in the dataset.",
+            "None of the above."
+        ],
+        "answer": [0],
+        "explanation": "One common method to improve the performance of a machine learning model is by collecting more data."
+    },
+    {
+        "question": "True or false: Overfitting occurs when a model performs well on training data but poorly on unseen data.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": [0],
+        "explanation": "Overfitting is when a model is too closely fitted to the training data and fails to generalize to unseen data."
+    },
+    {
+        "question": "Which of the following is an example of unsupervised learning?",
+        "options": [
+            "Identifying patterns in sales data to create customer segments.",
+            "Predicting house prices based on historical data.",
+            "Classifying emails as spam or not spam.",
+            "All of the above."
+        ],
+        "answer": [0],
+        "explanation": "Unsupervised learning involves identifying patterns or structure in the data, such as clustering customers into segments based on their purchasing behavior."
+    },
+    {
+        "question": "What is the purpose of a validation set in machine learning?",
+        "options": [
+            "To train the model.",
+            "To evaluate the model's performance during training.",
+            "To tune hyperparameters.",
+            "Both B and C."
+        ],
+        "answer": [3],
+        "explanation": "A validation set is used to evaluate the model's performance during training and to tune hyperparameters."
+    },
+    {
+        "question": "Which of the following is not a type of machine learning?",
+        "options": [
+            "Supervised learning",
+            "Unsupervised learning",
+            "Reinforcement learning",
+            "Assisted learning"
+        ],
+        "answer": [3],
+        "explanation": "Assisted learning is not a recognized type of machine learning; the main types are supervised, unsupervised, and reinforcement learning."
     }
 ]
