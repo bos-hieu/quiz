@@ -68,7 +68,7 @@
         const allAnswers = document.getElementById('all-answers');
 
         async function loadQuestions() {
-            const response = await fetch('oci-ai-question.json');
+            const response = await fetch('aws-questions.json');
             questions = await response.json();
             loadQuiz();
             showQuestion(currentQuestionIndex);
