@@ -1,0 +1,247 @@
+[
+    {
+        "question": "Why is it important to inspect your dataset before training a model?",
+        "options": [
+            "It isn't! Machine learning handles all of the reasoning about data for you.",
+            "Understanding the shape/structure of your data can help you make more informed decisions on selecting a model.",
+            "Need to back into the 'correct' answers and overly weight aspects so your model is 100% correct.",
+            "B and C."
+        ],
+        "answer": [1],
+        "explanation": "Inspecting your dataset before training a model is crucial. By understanding the shape and structure of your data, you can make more informed decisions on the choice of model and preprocessing steps."
+    },
+    {
+        "question": "In reinforcement learning, the reward:",
+        "options": [
+            "Is positive feedback given to an agent for each action it takes in a given state.",
+            "Is positive or negative feedback given to an agent for each action it takes in a given state.",
+            "Is negative feedback given to an agent for each action it takes in a given state.",
+            "All of the above."
+        ],
+        "answer": [3],
+        "explanation": "The reward in reinforcement learning can be positive or negative feedback given to an agent for each action it takes in a given state."
+    },
+    {
+        "question": "Your friend suggests you should randomize the order of your data before splitting into a training and test dataset. Is your friend right?",
+        "options": [
+            "No, your friend is not right. There is no benefit to doing this, and the detail just makes the process too complex.",
+            "No, your friend is not right. You should make sure your work is always repeatable, and there is no way to get repeatability if you randomly reorder the dataset.",
+            "Yes, your friend is right. It is possible your data was originally organized in such a way that splitting will give the model a biased view of the dataset.",
+            "None of the above."
+        ],
+        "answer": [2],
+        "explanation": "Randomizing the data before splitting it into training and test sets helps to avoid bias that could occur if the data was organized in a particular order."
+    },
+    {
+        "question": "In reinforcement learning, an episode:",
+        "options": [
+            "Is a set of instructions that tells a computer what to do.",
+            "A reward function is an incentive plan that assigns numerical rewards to different zones on the track.",
+            "Represents a period of trial and error when an agent makes decisions and gets feedback from its environment.",
+            "All of the above."
+        ],
+        "answer": [2],
+        "explanation": "In reinforcement learning, an episode represents a period of trial and error when an agent makes decisions and gets feedback from its environment."
+    },
+    {
+        "question": "In reinforcement learning, the agent:",
+        "options": [
+            "Receives reward signals from the environment for its actions.",
+            "Is a piece of software you train to learn by interacting with an environment.",
+            "Has a goal of maximizing its total reward over time.",
+            "All of the above."
+        ],
+        "answer": [3],
+        "explanation": "In reinforcement learning, the agent is a software entity that interacts with an environment to maximize its total reward over time."
+    },
+    {
+        "question": "What is the definition of model accuracy?",
+        "options": [
+            "How often your model makes a correct prediction.",
+            "How often your model makes similar predictions.",
+            "How well the results mimic a specific shape of an algorithm.",
+            "Does the prediction reflect reality."
+        ],
+        "answer": [0],
+        "explanation": "Model accuracy refers to how often the model makes a correct prediction."
+    },
+    {
+        "question": "When is a task considered to be 'unsupervised'?",
+        "options": [
+            "A task is unsupervised when you are using labeled data.",
+            "A task is unsupervised when you are using unlabeled data.",
+            "A task is unsupervised when you define a reward function.",
+            "All of the above."
+        ],
+        "answer": [1],
+        "explanation": "A task is considered unsupervised when you are using unlabeled data."
+    },
+    {
+        "question": "Which of the following is not a component of machine learning?",
+        "options": [
+            "Machine learning model",
+            "Model training algorithm",
+            "Artificial intelligence",
+            "Model inference algorithm"
+        ],
+        "answer": [2],
+        "explanation": "Artificial intelligence is a broader field, while machine learning is a component of it. The other options are components directly related to machine learning."
+    },
+    {
+        "question": "True or False: Machine Learning is a subset of Artificial Intelligence.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": [0],
+        "explanation": "Machine learning is indeed a subset of artificial intelligence."
+    },
+    {
+        "question": "When checking the quality of your data, what should you look out for?",
+        "options": [
+            "Outliers",
+            "Categorical labels",
+            "Training algorithms",
+            "All of the above."
+        ],
+        "answer": [3],
+        "explanation": "When checking data quality, you should consider outliers, categorical labels, and the suitability of training algorithms."
+    },
+    {
+        "question": "In reinforcement learning, the state:",
+        "options": [
+            "Can be a partial observation.",
+            "Is defined by the current position within the environment that is visible, or known, to an agent.",
+            "Can be perceived through sensors such as a camera capturing images.",
+            "All of the above."
+        ],
+        "answer": [3],
+        "explanation": "The state in reinforcement learning can be a partial observation, defined by the position within the environment, and perceived through sensors."
+    },
+    {
+        "question": "What is one real-world example of reinforcement learning?",
+        "options": [
+            "Coordinating traffic signals to minimize traffic congestion.",
+            "Identifying images of traffic lights from unseen images of traffic lights.",
+            "Training dogs by giving them biscuits unconditionally.",
+            "Detecting email spam about dog products."
+        ],
+        "answer": [0],
+        "explanation": "Coordinating traffic signals to minimize traffic congestion is an example of reinforcement learning."
+    },
+    {
+        "question": "True or false: In reinforcement learning, a value function is like looking ahead into the future and figuring out how much reward you expect to get given your current policy.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": [0],
+        "explanation": "In reinforcement learning, a value function estimates the expected reward for an agent's policy over time."
+    },
+    {
+        "question": "In reinforcement learning, the environment:",
+        "options": [
+            "Is the world that the agent interacts with.",
+            "Gives the agent feedback.",
+            "Can be simulated or real.",
+            "All of the above."
+        ],
+        "answer": [3],
+        "explanation": "In reinforcement learning, the environment is where the agent operates, providing feedback and can be either simulated or real."
+    },
+    {
+        "question": "Example: You are trying to cluster anonymized foot traffic location data to determine common 'downtown' hubs in a city. You're confident hubs will show up as tight clusters, so you're surprised when your first approach misses certain clusters you know should exist. What should you do?",
+        "options": [
+            "Check the dataset to test your assumptions. Is the data well-formatted? Are you missing clusters?",
+            "Inspect the model to test your assumptions. Does your model contain assumptions about how the data is organized?",
+            "Inspect your model evaluation mechanism to ensure you’re asking the right questions.",
+            "All of the above."
+        ],
+        "answer": [3],
+        "explanation": "When clustering fails to meet expectations, you should inspect the dataset, model, and evaluation methods to ensure they align with your assumptions."
+    },
+    {
+        "question": "Which is a characteristic of supervised learning?",
+        "options": [
+            "Does not use labels for training data.",
+            "Uses an algorithm to figure out which actions to take in a situation to maximize a reward.",
+            "Relies on a labeled dataset to train algorithms.",
+            "All of the above."
+        ],
+        "answer": [2],
+        "explanation": "Supervised learning relies on labeled datasets to train algorithms."
+    },
+    {
+        "question": "True or False: All problems where you're trying to predict some value can be solved with machine learning.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": [1],
+        "explanation": "Not all predictive problems are best solved with machine learning; some may require different approaches or may not be suitable for machine learning."
+    },
+    {
+        "question": "You decide to build a classifier that can detect if the webpage you’re viewing contains a recipe. You collect 200 examples of webpages that contain recipes and 200 examples of webpages that do not contain recipes. You define this as a supervised learning problem… so in this case, what would be your label?",
+        "options": [
+            "Webpage 'contains a recipe' or 'does not contain a recipe'",
+            "The text on the page.",
+            "The portion of the text on the page that contains a recipe.",
+            "The ingredients."
+        ],
+        "answer": [0],
+        "explanation": "In a supervised learning problem, the label would be whether the webpage 'contains a recipe' or 'does not contain a recipe.'"
+    },
+    {
+        "question": "Let’s say you’re trying to predict a child’s shoe size from their age and parents’ shoe sizes. You relax the problem to allow for predictions between shoe sizes. What kind of machine learning task would you use to represent this problem?",
+        "options": [
+            "Regression",
+            "Classification",
+            "Reinforcement Learning",
+            "Clustering"
+        ],
+        "answer": [0],
+        "explanation": "Regression is used to predict continuous values, such as predicting shoe size based on age and parents' shoe sizes."
+    },
+    {
+        "question": "What is a machine learning model?",
+        "options": [
+            "Generic program made specific by data",
+            "A set of high-level statistics and visualizations that help you understand the shape of your data",
+            "A linear function",
+            "A mechanism for improving models"
+        ],
+        "answer": [0],
+        "explanation": "A machine learning model is a generic program that becomes specific when trained on data."
+    },
+    {
+        "question": "What is one way that reinforcement learning is different from the other types of machine learning?",
+        "options": [
+            "Reinforcement learning requires labeled training data.",
+            "In reinforcement learning an agent learns from experience and experimentation.",
+            "In reinforcement learning you create a model to train your data.",
+            "Reinforcement learning uses known data to makes predictions about new data."
+        ],
+        "answer": [1],
+        "explanation": "Reinforcement learning is unique because it involves an agent learning from interactions with the environment, rather than from a static dataset."
+    },
+    {
+        "question": "Which of the following is not an example of a supervised learning task?",
+        "options": [
+            "A spam email classifier from data labeled as 'spam' or 'not spam'",
+            "Identifying a product type by images of that product",
+            "Estimate the temperature from historic data comparing weather channel's temperature value & thermostat readings",
+            "Group customers into customer segments based on product usage patterns, with the specific segments not known in advance"
+        ],
+        "answer": [2],
+        "explanation": "Estimating temperature from historic data is more aligned with regression tasks, not supervised learning as it doesn't involve labeled training examples."
+    },
+    {
+        "question": "True or false: In reinforcement learning, a policy defines the action that the agent should take for a given state.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": [0],
+        "explanation": "In reinforcement learning, a policy is a strategy or mapping from states to actions that the agent uses to determine its actions."
+    }
+]
