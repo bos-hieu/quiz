@@ -40,6 +40,10 @@
 </head>
 <body>
     <h1>AWS Practice Quiz</h1>
+    <select id="question-set-select">
+        <option value="">Select a question set</option>
+    </select>
+    <button id="load-questions-button">Load Questions</button>
     <div id="progress"></div>
     <div id="quiz-container"></div>
     <button id="back-button" style="display:none;">Back</button>
@@ -66,13 +70,31 @@
         const progress = document.getElementById('progress');
         const showAnswersButton = document.getElementById('show-answers-button');
         const allAnswers = document.getElementById('all-answers');
+        const questionSetSelect = document.getElementById('question-set-select');
+        const loadQuestionsButton = document.getElementById('load-questions-button');
+
+        async function loadQuestionSets() {
+            const response = await fetch('questions-set/index.json');
+            const questionSets = await response.json();
+            questionSets.forEach(set => {
+                const option = document.createElement('option');
+                option.value = set.file;
+                option.textContent = set.name;
+                questionSetSelect.appendChild(option);
+            });
+        }
 
         async function loadQuestions() {
-            const response = await fetch('aws-questions.json');
-            questions = await response.json();
-            loadQuiz();
-            showQuestion(currentQuestionIndex);
-            updateProgress();
+            const selectedSet = questionSetSelect.value;
+            if (selectedSet) {
+                const response = await fetch(`questions-set/${selectedSet}`);
+                questions = await response.json();
+                loadQuiz();
+                showQuestion(currentQuestionIndex);
+                updateProgress();
+            } else {
+                alert('Please select a question set.');
+            }
         }
 
         function loadQuiz() {
@@ -210,7 +232,8 @@
 
         showAnswersButton.addEventListener('click', showAllAnswers);
 
-        loadQuestions();
+        loadQuestionsButton.addEventListener('click', loadQuestions);
+        loadQuestionSets();
     </script>
 </body>
 </html>

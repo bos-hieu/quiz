@@ -1,0 +1,14 @@
+[
+  {
+    "name": "AWS Solutions Architect Associate",
+    "file": "aws-saa.json"
+  },
+  {
+    "name": "Oracle Cloud Infrastructure",
+    "file": "oracle-oci.json"
+  },
+  {
+    "name": "AWS AI DeepRacer",
+    "file": "aws-ai-deepracer.json"
+  }
+]
