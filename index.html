@@ -241,7 +241,7 @@
             });
             backButton.style.display = index === 0 ? 'none' : 'inline';
             submitAnswerButton.style.display = 'inline';
-            nextButton.style.display = 'none';
+            nextButton.style.display = index === questions.length - 1 ? 'none' : 'inline';
             submitButton.style.display = index === questions.length - 1 ? 'inline' : 'none';
             updateProgress();
         }
@@ -266,7 +266,9 @@
                 updateProgress();
             } else {
                 explanations.classList.add('incorrect');
-                explanations.innerHTML += " Please try again.";
+                if (!explanations.innerHTML.includes("Please try again.")) {
+                    explanations.innerHTML += " Please try again.";
+                }
             }
         }
 
