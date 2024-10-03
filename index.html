@@ -7,52 +7,116 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-        .question {
-            display: none;
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .quiz-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 20px;
         }
-        .explanation {
-            display: none;
-            margin-top: 10px;
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
-        .correct {
-            color: green;
+        select {
+            flex-grow: 1;
+            margin-right: 10px;
         }
-        .incorrect {
-            color: red;
+        button {
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-        .correct-answer {
-            color: green;
-        }
-        .result {
-            margin-top: 20px;
+        button:hover {
+            background-color: #2980b9;
         }
         #progress {
+            text-align: center;
+            font-weight: bold;
             margin-bottom: 20px;
         }
+        .question {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-weight: bold;
+            margin-top: 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .explanation {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .result {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
         #all-answers {
-            display: none;
-            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .answer {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .correct-answer {
+            color: #28a745;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <h1>AWS Practice Quiz</h1>
-    <select id="question-set-select">
-        <option value="">Select a question set</option>
-    </select>
-    <button id="load-questions-button">Load Questions</button>
+    <h1>Practice Quiz</h1>
+    <div class="quiz-controls">
+        <select id="question-set-select">
+            <option value="">Select a question set</option>
+        </select>
+        <button id="load-questions-button">Load Questions</button>
+    </div>
     <div id="progress"></div>
     <div id="quiz-container"></div>
-    <button id="back-button" style="display:none;">Back</button>
-    <button id="submit-answer-button">Submit Answer</button>
-    <button id="next-button" style="display:none;">Next</button>
-    <button id="submit-button" style="display:none;">Submit Quiz</button>
-    <button id="show-answers-button">Show Answers</button>
+    <div class="quiz-controls">
+        <button id="back-button" style="display:none;">Back</button>
+        <button id="submit-answer-button">Submit Answer</button>
+        <button id="next-button" style="display:none;">Next</button>
+        <button id="submit-button" style="display:none;">Submit Quiz</button>
+        <button id="show-answers-button">Show Answers</button>
+        <button id="restart-button" style="display:none;">Restart</button>
+    </div>
     <div class="result" id="result-container"></div>
-    <button id="restart-button" style="display:none;">Restart</button>
     <div id="all-answers"></div>
     
     <script>
