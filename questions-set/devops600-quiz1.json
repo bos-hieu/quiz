@@ -7,7 +7,7 @@
             "DevOps is a set of development and operations tools that automate the software development process.",
             "DevOps is the coordination between the development and operations teams to improve communication between the teams to develop software more efficiently."
         ],
-        "answer": [2],
+        "answer": [1],
         "explanation": "DevOps is more than just tools or team collaboration; it represents a cultural shift with practices and tools that enable fast and reliable delivery of applications."
     },
     {
@@ -18,7 +18,7 @@
             "Traditional software development methods often use continuous integration and continuous delivery, which slows down the development process, by using repetitive tasks.",
             "Traditional software development methods often involve monolithic architectures that are difficult to update and deploy, development methods that are not iterative, and have long release cycles."
         ],
-        "answer": [4],
+        "answer": [3],
         "explanation": "Traditional software development faces challenges due to monolithic architectures, making it difficult to scale and innovate quickly, and often leads to long release cycles."
     },
     {
@@ -29,7 +29,7 @@
             "Moving to DevOps requires hiring DevOps professionals, adopting new processes, and investing in new tools.",
             "Moving to DevOps requires creating new teams, changing all processes, and selecting the right tools."
         ],
-        "answer": [2],
+        "answer": [1],
         "explanation": "DevOps adoption is more than hiring new people; it requires a cultural shift, changes in processes, and automation to improve development cycles and delivery."
     },
     {
@@ -40,7 +40,7 @@
             "Let your manager know that DevOps is a methodology and not an AWS product. Let him know that only tools that are not optimized to work in a DevOps environment should be replaced. AWS has great tools, but also supports any tools that the company chooses to use.",
             "Tell your manager that the AWS DevOps philosophy should be used by all companies. Let him know that only tools that are not optimized to work in a DevOps environment should be replaced. AWS has great tools, but also supports tools from industry-leading vendors."
         ],
-        "answer": [2],
+        "answer": [1],
         "explanation": "DevOps is a methodology and not tied to any specific vendor, including AWS. Only tools that don't fit a DevOps environment need to be replaced."
     }
 ]
