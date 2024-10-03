@@ -10,5 +10,9 @@
   {
     "name": "AWS AI DeepRacer",
     "file": "aws-ai-deepracer.json"
+  },
+  {
+    "name": "DevOps 600 Quiz 1",
+    "file": "devops600-quiz1.json"
   }
 ]

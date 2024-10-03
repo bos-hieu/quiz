@@ -165,14 +165,16 @@
             quizContainer.innerHTML = '';
             resultContainer.innerHTML = '';
             allAnswers.innerHTML = '';
+            allAnswers.style.display = 'none'; // Hide all answers by default
             questions.forEach((q, index) => {
                 const questionDiv = document.createElement('div');
                 questionDiv.classList.add('question');
                 if (index === 0) questionDiv.style.display = 'block';
+                else questionDiv.style.display = 'none';
                 questionDiv.innerHTML = `
                     <p>${index + 1}. ${q.question}</p>
                     ${q.options.map((option, i) => `<label><input type="checkbox" name="question${index}" value="${i}"> ${String.fromCharCode(65 + i)}. ${option}</label><br>`).join('')}
-                    <div class="explanation" id="explanation${index}">${q.explanation}</div>
+                    <div class="explanation" id="explanation${index}" style="display: none;">${q.explanation}</div>
                 `;
                 quizContainer.appendChild(questionDiv);
 
