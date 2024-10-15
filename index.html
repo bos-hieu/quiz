@@ -262,7 +262,10 @@
                     const correctOption = document.querySelector(`input[name="question${currentQuestionIndex}"][value="${answer}"]`).parentNode;
                     correctOption.innerHTML += ' <span class="correct-answer">✓</span>';
                 });
-                answeredQuestions++;
+                // only score at first time correct
+                if (!explanations.innerHTML.includes("Please try again.")) {
+                    answeredQuestions++;
+                }
                 updateProgress();
             } else {
                 explanations.classList.add('incorrect');
@@ -273,7 +276,6 @@
         }
 
         function showResults() {
-            let score = 0;
             questions.forEach((q, index) => {
                 const explanations = document.getElementById(`explanation${index}`);
                 const checkboxes = document.querySelectorAll(`input[name="question${index}"]:checked`);
@@ -282,13 +284,12 @@
 
                 if (isCorrect) {
                     explanations.classList.add('correct');
-                    score++;
                 } else {
                     explanations.classList.add('incorrect');
                 }
                 explanations.style.display = 'block';
             });
-            resultContainer.innerHTML = `You scored ${score} out of ${questions.length}.`;
+            resultContainer.innerHTML = `You scored ${answeredQuestions} out of ${questions.length}.`;
         }
 
         function restartQuiz() {
