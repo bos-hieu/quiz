@@ -14,5 +14,9 @@
   {
     "name": "DevOps 600 Quiz 1",
     "file": "devops600-quiz1.json"
+  },
+  {
+    "name": "DevOps 600 Quiz 2",
+    "file": "devops600-quiz2.json"
   }
 ]
