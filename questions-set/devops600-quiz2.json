@@ -33,5 +33,28 @@
         ],
         "answer": [0, 1, 3],
         "explanation": "AWS CodeDeploy supports deployments to on-premises servers and EC2 instances, can extend to multiple regions, and integrates with various configuration and CI/CD systems, making it a versatile tool for automation."
+    },
+    {
+        "question": "Your IT enterprise has recently adopted DevOps and wants to automate their software delivery process. You want to model the full release process for building your code, deploying to pre-production environments, testing your application, and releasing it to production. Which one of the following AWS services will enhance your ability to further integrate with other AWS and third-party products?",
+        "options": [
+            "AWS CodeDeploy",
+            "AWS CodePipeline"
+        ],
+        "answer": [1],
+        "explanation": "AWS CodePipeline automates the full release process and integrates seamlessly with AWS and third-party products, making it the best choice for automating software delivery in a DevOps environment."
+    },
+    {
+        "question": "Your customer has decided to adopt DevOps. Their DevOps team is choosing the right tools for the source control process. They would like to know how AWS CodeCommit differs from other Git-based source control systems. What will you tell them to help them understand the differences? (Select FOUR)",
+        "options": [
+            "There is no need to host, maintain, and backup your own source control servers.",
+            "It automatically encrypts your files in transit and at rest.",
+            "It is built on highly available, redundant, and durable AWS services.",
+            "It allows you to store any number of files, but there are repository size limits.",
+            "It increases the speed and frequency of your development lifecycle by keeping repositories close to your builds.",
+            "It does not offer the ability to configure notifications.",
+            "It is a fully managed build service that makes it possible for you to build, test, and integrate code more frequently."
+        ],
+        "answer": [0, 1, 2, 4],
+        "explanation": "AWS CodeCommit offers several benefits, including no need to manage your own servers, built-in encryption, high availability, and improved development speed by keeping repositories near your builds."
     }
 ]
