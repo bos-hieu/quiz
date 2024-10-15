@@ -56,5 +56,333 @@
         ],
         "answer": [0, 1, 2, 4],
         "explanation": "AWS CodeCommit offers several benefits, including no need to manage your own servers, built-in encryption, high availability, and improved development speed by keeping repositories near your builds."
+    },{
+        "question": "Which AWS service allows developers to write, run, and debug their code within a cloud-based integrated development environment (IDE)?",
+        "options": [
+            "AWS CodeCommit",
+            "AWS Cloud9",
+            "AWS Lambda",
+            "AWS CodeBuild"
+        ],
+        "answer": [1],
+        "explanation": "AWS Cloud9 is Amazon's cloud-based IDE, allowing developers to write, run, and debug their code directly in the cloud."
+    },
+    {
+        "question": "What is the primary benefit of using AWS CodeCommit for source control?",
+        "options": [
+            "It automatically scales applications based on demand.",
+            "It allows users to collaborate on code using Git commands and eliminates the need to manage hardware for source control.",
+            "It provides real-time insights into application performance.",
+            "It enables continuous delivery of software applications."
+        ],
+        "answer": [1],
+        "explanation": "AWS CodeCommit is a fully managed, secure Git-based repository that eliminates the need to manage hardware for source control."
+    },
+    {
+        "question": "Which service is used to automatically compile source code, run tests, and produce software packages ready for deployment?",
+        "options": [
+            "AWS CodeDeploy",
+            "AWS CodePipeline",
+            "AWS CodeBuild",
+            "AWS CloudFormation"
+        ],
+        "answer": [2],
+        "explanation": "AWS CodeBuild is a fully managed build service that compiles source code, runs tests, and produces deployable software packages."
+    },
+    {
+        "question": "Which AWS service helps you analyze and debug distributed applications by providing an end-to-end view of requests as they travel through your application?",
+        "options": [
+            "AWS X-Ray",
+            "Amazon CloudWatch",
+            "AWS CloudTrail",
+            "AWS Config"
+        ],
+        "answer": [0],
+        "explanation": "AWS X-Ray helps in debugging and analyzing distributed applications by tracing requests as they move through the system."
+    },
+    {
+        "question": "What functionality does AWS CodeDeploy provide in a DevOps pipeline?",
+        "options": [
+            "Source control management for storing code in Git repositories.",
+            "Monitoring and debugging distributed applications.",
+            "Automated deployments to a variety of compute services like EC2, AWS Lambda, and on-premises servers.",
+            "Real-time tracking of infrastructure performance metrics."
+        ],
+        "answer": [2],
+        "explanation": "AWS CodeDeploy automates software deployments to various compute services, enabling rapid and reliable code delivery."
+    },
+    {
+        "question": "Which AWS service monitors AWS resources and applications in real time, allowing you to set alarms and track metrics?",
+        "options": [
+            "AWS X-Ray",
+            "Amazon CloudWatch",
+            "AWS CodePipeline",
+            "AWS CodeDeploy"
+        ],
+        "answer": [1],
+        "explanation": "Amazon CloudWatch monitors AWS resources and applications, providing insights through metrics, logs, and alarms."
+    },
+    {
+        "question": "Which service can be used to automatically start a pipeline when new code is committed to a repository?",
+        "options": [
+            "AWS CodeDeploy",
+            "AWS Cloud9",
+            "AWS CodePipeline",
+            "AWS X-Ray"
+        ],
+        "answer": [2],
+        "explanation": "AWS CodePipeline can be configured to automatically start the release process when new code is committed to a repository."
+    },
+    {
+        "question": "What is the role of the AppSpec file in AWS CodeDeploy?",
+        "options": [
+            "It defines the metrics to be monitored by Amazon CloudWatch.",
+            "It specifies where to copy the code and how to install and run it during deployment.",
+            "It defines the pipeline structure for continuous integration.",
+            "It is used to specify code build configurations."
+        ],
+        "answer": [1],
+        "explanation": "In AWS CodeDeploy, the AppSpec file specifies where to copy the code and how to install and run it during deployment."
+    },
+    {
+        "question": "Which AWS service is used to manage the entire lifecycle of infrastructure as code?",
+        "options": [
+            "AWS OpsWorks",
+            "AWS CloudFormation",
+            "AWS Lambda",
+            "AWS CodeBuild"
+        ],
+        "answer": [1],
+        "explanation": "AWS CloudFormation allows users to define and manage their infrastructure using templates, treating infrastructure as code."
+    },
+    {
+        "question": "Which AWS service allows for automated testing, building, and deployment whenever there is a code change?",
+        "options": [
+            "AWS CodeBuild",
+            "AWS CodeDeploy",
+            "AWS CodePipeline",
+            "Amazon CloudWatch"
+        ],
+        "answer": [2],
+        "explanation": "AWS CodePipeline automates the build, test, and deploy stages of your release process whenever a code change is detected."
+    },
+{
+        "question": "In the early 2000s, what kind of architecture did Amazon's retail website use before adopting DevOps?",
+        "options": [
+            "Service-oriented architecture",
+            "Microservices architecture",
+            "Monolithic architecture",
+            "Event-driven architecture"
+        ],
+        "answer": [2],
+        "explanation": "Amazon's retail website initially used a monolithic architecture, which hindered development speed and deployment flexibility."
+    },
+    {
+        "question": "What is the concept behind Amazon's 'two-pizza teams'?",
+        "options": [
+            "Teams should consist of the minimum number of people required to handle two pizzas.",
+            "Teams should be cross-functional and consist of 8-10 people to maintain agility and ownership.",
+            "Teams should focus only on code development and testing.",
+            "Teams should consist of experts in both development and operations to handle deployments."
+        ],
+        "answer": [1],
+        "explanation": "Amazon's two-pizza teams consist of 8-10 people, are cross-functional, and are responsible for specific services to ensure agility and ownership."
+    },
+    {
+        "question": "How did Amazon improve its software release process after adopting microservices?",
+        "options": [
+            "By increasing manual processes in the testing phase.",
+            "By automating the software release process, from code check-in to production.",
+            "By switching back to a monolithic architecture for simplicity.",
+            "By eliminating metrics and monitoring systems."
+        ],
+        "answer": [1],
+        "explanation": "After adopting microservices, Amazon automated the software release process, improving speed, reliability, and reducing human errors."
+    },
+    {
+        "question": "What cultural shift did Amazon undergo as part of its DevOps transformation?",
+        "options": [
+            "Focusing on hierarchical structures and centralized decision-making.",
+            "Creating large specialized teams with specific roles for development and operations.",
+            "Emphasizing cross-functional teams, collaboration, automation, and continuous improvement.",
+            "Prioritizing manual quality assurance and large release cycles."
+        ],
+        "answer": [2],
+        "explanation": "Amazon's DevOps transformation emphasized cross-functional teams, automation, and continuous improvement, fostering a culture of collaboration and innovation."
+    },
+    {
+        "question": "What was one of the key benefits Amazon gained from transitioning to microservices and DevOps?",
+        "options": [
+            "They were able to reduce the size of their development teams.",
+            "They achieved over 150 million deployments a year with higher reliability and speed.",
+            "They eliminated the need for automated testing in their deployment process.",
+            "They returned to using traditional development practices for legacy systems."
+        ],
+        "answer": [1],
+        "explanation": "By adopting microservices and DevOps, Amazon achieved over 150 million deployments a year, improving the speed and reliability of software delivery."
+    },
+{
+        "question": "What is the main focus of Scrum as an agile project management framework?",
+        "options": [
+            "Fixing requirements to control time and cost.",
+            "Fixing time and cost to control requirements.",
+            "Emphasizing extensive documentation.",
+            "Using rigid development processes."
+        ],
+        "answer": [1],
+        "explanation": "Scrum fixes time and cost in order to control requirements through iterative and incremental delivery."
+    },
+    {
+        "question": "What is the role of the Product Owner in Scrum?",
+        "options": [
+            "To manage the Scrum team's daily tasks.",
+            "To prioritize the product backlog and represent customer interests.",
+            "To ensure that the team meets their sprint goals.",
+            "To develop user stories for the Scrum team."
+        ],
+        "answer": [1],
+        "explanation": "The Product Owner in Scrum is responsible for managing the product backlog and ensuring that the team works on high-priority tasks that deliver customer value."
+    },
+    {
+        "question": "Which meeting allows the team to review their completed work and gather feedback from stakeholders?",
+        "options": [
+            "Sprint Planning",
+            "Daily Scrum",
+            "Sprint Review",
+            "Sprint Retrospective"
+        ],
+        "answer": [2],
+        "explanation": "The Sprint Review is held at the end of the sprint to showcase the team's completed work to stakeholders and collect feedback."
+    },
+    {
+        "question": "What is the primary goal of the Sprint Retrospective in Scrum?",
+        "options": [
+            "To showcase completed work to stakeholders.",
+            "To plan the next sprint's tasks.",
+            "To reflect on the team's process and identify improvements.",
+            "To update the product backlog."
+        ],
+        "answer": [2],
+        "explanation": "The Sprint Retrospective is used by the team to reflect on their processes and discuss how they can improve in the next sprint."
+    },
+    {
+        "question": "What does a burndown chart represent in Scrum?",
+        "options": [
+            "The overall product roadmap.",
+            "The total time left to complete the project.",
+            "The remaining work in a sprint or release over time.",
+            "The velocity of the development team."
+        ],
+        "answer": [2],
+        "explanation": "A burndown chart is used to track the amount of work remaining over time, providing a visual representation of progress."
+    },
+    {
+        "question": "How does Scrum ensure team collaboration and communication during a sprint?",
+        "options": [
+            "By having the ScrumMaster assign daily tasks to each team member.",
+            "Through the Daily Scrum meeting where team members discuss their progress, plans, and any obstacles.",
+            "By having team members write extensive documentation on their work.",
+            "By requiring that all team members work on the same task."
+        ],
+        "answer": [1],
+        "explanation": "The Daily Scrum meeting allows team members to communicate their progress and coordinate their efforts during the sprint."
+    },
+    {
+        "question": "In Scrum, who is responsible for maintaining and updating the product backlog?",
+        "options": [
+            "The ScrumMaster",
+            "The Product Owner",
+            "The Development Team",
+            "The Stakeholders"
+        ],
+        "answer": [1],
+        "explanation": "The Product Owner is responsible for maintaining the product backlog, which includes prioritizing tasks and ensuring alignment with customer needs."
+    },
+    {
+        "question": "Which Scrum artifact provides a prioritized list of features or tasks to be worked on in future sprints?",
+        "options": [
+            "Sprint Backlog",
+            "Product Backlog",
+            "Burndown Chart",
+            "Task Board"
+        ],
+        "answer": [1],
+        "explanation": "The Product Backlog is a prioritized list of features, tasks, and work items that the team will address in future sprints."
+    },
+    {
+        "question": "What is the main difference between the Product Backlog and Sprint Backlog in Scrum?",
+        "options": [
+            "The Product Backlog is used for short-term planning, while the Sprint Backlog is used for long-term planning.",
+            "The Product Backlog is a prioritized list of all work items, while the Sprint Backlog includes only the items selected for the current sprint.",
+            "The Product Backlog is managed by the ScrumMaster, while the Sprint Backlog is managed by the Product Owner.",
+            "The Product Backlog tracks completed work, while the Sprint Backlog tracks pending tasks."
+        ],
+        "answer": [1],
+        "explanation": "The Product Backlog contains all work items, whereas the Sprint Backlog includes only the items that the team has committed to completing during the current sprint."
+    },
+    {
+        "question": "What role does the ScrumMaster play during the Daily Scrum?",
+        "options": [
+            "The ScrumMaster assigns tasks to each team member.",
+            "The ScrumMaster ensures the team follows the Scrum framework and helps remove obstacles.",
+            "The ScrumMaster reviews the team's progress and provides solutions to technical problems.",
+            "The ScrumMaster decides which features should be prioritized."
+        ],
+        "answer": [1],
+        "explanation": "The ScrumMaster facilitates the Daily Scrum, ensures the team adheres to Scrum practices, and removes any obstacles that may be blocking progress."
+    },{
+        "question": "What is a key characteristic of agile project delivery?",
+        "options": [
+            "Projects are completed in one large release.",
+            "Projects are delivered in stages with work completed iteratively and collaboratively.",
+            "Projects follow a strict sequential process.",
+            "Projects avoid stakeholder involvement until the final stage."
+        ],
+        "answer": [1],
+        "explanation": "Agile projects are delivered in stages, with work completed iteratively and collaboratively, allowing for frequent adjustments and improvements."
+    },
+    {
+        "question": "What is the purpose of a stand-up meeting in agile techniques?",
+        "options": [
+            "To review the entire project plan.",
+            "To make decisions on future product features.",
+            "To allow team members to share progress and identify any blockers.",
+            "To conduct detailed task estimations."
+        ],
+        "answer": [2],
+        "explanation": "Stand-up meetings are short daily check-ins where team members share what they are working on, what they plan to do, and any obstacles they are facing."
+    },
+    {
+        "question": "What does a task board in agile project management represent?",
+        "options": [
+            "A chart for tracking project costs.",
+            "A visual representation of tasks categorized as backlog, to-do, doing, and done.",
+            "A detailed list of customer requirements.",
+            "A schedule for the next project sprint."
+        ],
+        "answer": [1],
+        "explanation": "A task board in agile is a visual tool used to monitor progress, showing tasks in categories like backlog, to-do, doing, and done."
+    },
+    {
+        "question": "What does the burndown chart track in agile projects?",
+        "options": [
+            "Team productivity over time.",
+            "Project cost in relation to tasks completed.",
+            "Remaining work compared to time left in the project.",
+            "Customer satisfaction throughout the project."
+        ],
+        "answer": [2],
+        "explanation": "A burndown chart tracks the remaining work compared to the time left, helping teams monitor their progress and identify potential delays."
+    },
+    {
+        "question": "Which of the following is a key principle of agile project management?",
+        "options": [
+            "Maintaining detailed documentation for every project phase.",
+            "Delivering a fully completed product before gathering feedback.",
+            "Using 'little and often' planning and controls to guide the project.",
+            "Eliminating all project reviews and reflections."
+        ],
+        "answer": [2],
+        "explanation": "Agile projects use 'little and often' planning and controls, focusing on frequent reviews, collaboration, and flexibility to adapt to change."
     }
 ]
