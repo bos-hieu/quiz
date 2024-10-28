@@ -1,0 +1,414 @@
+[
+    {
+        "question": "The ------- represents the voice of the customer and has the authority to make decisions about the product.",
+        "options": [
+            "ScrumMaster",
+            "Development Team",
+            "Product Owner",
+            "Team Supervisor"
+        ],
+        "answer": [2],
+        "explanation": "The Product Owner in Scrum is responsible for representing the customer's voice and managing the product backlog."
+    },
+    {
+        "question": "In the Scrum framework, the project begins with a clear vision provided by the ______ and a set of product features ranked by _______.",
+        "options": [
+            "business, easiness",
+            "development team, easiness",
+            "scrum master, importance",
+            "business, importance"
+        ],
+        "answer": [3],
+        "explanation": "The Scrum project starts with a clear vision and a prioritized set of product features."
+    },
+    {
+        "question": "Sprint progress is tracked using the ________ , the ________ , and the daily scrum.",
+        "options": [
+            "burndown chart",
+            "sprint planning meeting",
+            "sprint review report",
+            "release planning",
+            "task board"
+        ],
+        "answer": [0],
+        "explanation": "Progress in Scrum is tracked with tools such as the burndown chart, sprint backlog, and daily standups."
+    },
+    {
+        "question": "In the Scrum framework, a time-box, commonly referred to as an iteration or sprint, is a fixed period during which the team works to complete the selected features.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": [0],
+        "explanation": "A sprint is a fixed time period in Scrum dedicated to completing selected work items."
+    },
+    {
+        "question": "In the Scrum framework, the team selects items from the ________ that it believes can be completed during the sprint.",
+        "options": [
+            "product backlog",
+            "daily scrum",
+            "management tools",
+            "features"
+        ],
+        "answer": [0],
+        "explanation": "During sprint planning, the team selects items from the product backlog to work on."
+    },
+    {
+        "question": "The product owner removes obstacles, facilitates team communication, mediates discussions within the team, and negotiates with those external to the team.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": [1],
+        "explanation": "The Scrum Master typically handles removing obstacles and facilitating communication, not the Product Owner."
+    },
+    {
+        "question": "In the Scrum framework, the product backlog can be changed in preparation for the next sprint.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": [0],
+        "explanation": "The product backlog is an evolving list that can be updated before each sprint."
+    },
+    {
+        "question": "There are three roles in Scrum: the -------, the -------, and the development Team.",
+        "options": [
+            "Product Owner",
+            "ScrumMaster",
+            "Project Owner",
+            "Project Manager",
+            "Project Validator"
+        ],
+        "answer": [0],
+        "explanation": "Scrum roles include Product Owner, Scrum Master, and Development Team."
+    },
+    {
+        "question": "In the Scrum framework, ________ is a way to do long-term planning for a time box that consists of multiple sprints.",
+        "options": [
+            "Release Planning",
+            "Sprint Planning",
+            "Project Budget Planning",
+            "Product Planning"
+        ],
+        "answer": [0],
+        "explanation": "Release Planning in Scrum helps in long-term planning across multiple sprints."
+    },
+    {
+        "question": "In the Scrum framework, the _______ is responsible for maintaining the product backlog.",
+        "options": [
+            "scrum master",
+            "development team",
+            "project manager",
+            "product owner"
+        ],
+        "answer": [3],
+        "explanation": "The Product Owner maintains the product backlog in Scrum."
+    },
+    {
+        "question": "The ________ is the keeper of the process, the advocate for the team, and the protector of the team.",
+        "options": [
+            "ScrumMaster",
+            "Customer Representative",
+            "Lead Developer",
+            "Product Owner"
+        ],
+        "answer": [0],
+        "explanation": "The ScrumMaster supports and protects the team, and ensures the Scrum process is followed."
+    },
+    {
+        "question": "At the end of the sprint, the team demos the work they have completed to the stakeholders and gathers feedback. This event is called _______.",
+        "options": [
+            "sprint review",
+            "scrum management",
+            "sprint retrospective",
+            "sprint planning"
+        ],
+        "answer": [0],
+        "explanation": "The sprint review is an event where the team presents the completed work to stakeholders."
+    },
+    {
+        "question": "In the Scrum framework, the entire scrum team attends the release-planning meeting.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": [0],
+        "explanation": "In Scrum, the entire team participates in release planning for alignment on long-term goals."
+    },
+    {
+        "question": "What is the primary focus of Agile over processes and tools?",
+        "options": [
+            "Comprehensive documentation",
+            "Following a strict plan",
+            "Customer collaboration",
+            "Individuals and interactions"
+        ],
+        "answer": [3],
+        "explanation": "Agile prioritizes people and communication over rigid processes or tools."
+    },
+    {
+        "question": "In Agile, what is valued more than comprehensive documentation?",
+        "options": [
+            "Working software",
+            "Processes and tools",
+            "Contract negotiation",
+            "Detailed planning"
+        ],
+        "answer": [0],
+        "explanation": "Working software is seen as a primary measure of progress in Agile."
+    },
+    {
+        "question": "How does Agile view customer collaboration?",
+        "options": [
+            "As less important than contract negotiation",
+            "As equally important as comprehensive documentation",
+            "As more important than contract negotiation",
+            "As only relevant in early stages of development"
+        ],
+        "answer": [2],
+        "explanation": "Agile places greater emphasis on collaborating with customers rather than strict contractual terms."
+    },
+    {
+        "question": "What does Agile encourage teams to prioritize over following a plan?",
+        "options": [
+            "Minimizing risk",
+            "Comprehensive documentation",
+            "Responding to change",
+            "Strictly adhering to timelines"
+        ],
+        "answer": [2],
+        "explanation": "Agile promotes adaptability, emphasizing flexibility to meet changing needs."
+    },
+    {
+        "question": "Which statement best reflects the Agile mindset?",
+        "options": [
+            "While processes and documentation are valuable, people and working software are prioritized.",
+            "Planning should never be altered.",
+            "Contracts are prioritized over collaboration.",
+            "Software should be released only when all bugs are fixed."
+        ],
+        "answer": [0],
+        "explanation": "Agile values items on the left (people, working software, collaboration, flexibility) over those on the right."
+    },
+    {
+        "question": "Which role in Scrum is responsible for the product backlog?",
+        "options": [
+            "Scrum Master",
+            "Product Owner",
+            "Development Team",
+            "Stakeholders"
+        ],
+        "answer": [1],
+        "explanation": "The Product Owner manages and prioritizes the product backlog based on user needs."
+    },
+    {
+        "question": "What is the primary goal of a Scrum sprint?",
+        "options": [
+            "Complete as much work as possible",
+            "Deliver the best possible business value",
+            "Test new tools",
+            "Eliminate all bugs"
+        ],
+        "answer": [1],
+        "explanation": "The sprint aims to deliver the most valuable increment of work, guided by prioritized backlog items."
+    },
+    {
+        "question": "What is timeboxing in Scrum?",
+        "options": [
+            "A focus on user-centered design",
+            "Setting time limits for activities like sprints and daily standups",
+            "Delegating tasks among team members",
+            "Avoiding unnecessary tasks"
+        ],
+        "answer": [1],
+        "explanation": "Timeboxing restricts activities to specific durations, promoting efficiency and focus in Scrum."
+    },
+    {
+        "question": "Which of these events is NOT a core part of Scrum?",
+        "options": [
+            "Sprint planning",
+            "Daily standup",
+            "Sprint review",
+            "Monthly backlog review"
+        ],
+        "answer": [3],
+        "explanation": "Core Scrum events include sprint planning, daily standups, sprint review, and retrospectives."
+    },
+    {
+        "question": "What is a 'Product Increment' in Scrum?",
+        "options": [
+            "The backlog for the next sprint",
+            "The collection of completed work from a sprint",
+            "A documentation package",
+            "A new feature proposal"
+        ],
+        "answer": [1],
+        "explanation": "The product increment includes all completed and potentially shippable work at the end of a sprint."
+    },
+    {
+        "question": "Which of the following is a Scrum value?",
+        "options": [
+            "Accountability",
+            "Empathy",
+            "Focus",
+            "Resourcefulness"
+        ],
+        "answer": [2],
+        "explanation": "The five Scrum values are commitment, courage, focus, openness, and respect."
+    },
+    {
+        "question": "How frequently should Scrum teams hold a Sprint Retrospective?",
+        "options": [
+            "Every day",
+            "Every month",
+            "After each sprint",
+            "At the start of every project"
+        ],
+        "answer": [2],
+        "explanation": "Retrospectives occur after each sprint to review performance and make improvements."
+    },
+    {
+        "question": "What is the primary purpose of the Daily Standup?",
+        "options": [
+            "To plan future sprints",
+            "To discuss daily progress and blockers",
+            "To review completed work",
+            "To assign new roles"
+        ],
+        "answer": [1],
+        "explanation": "The Daily Standup is a short meeting to align on daily goals and address any issues."
+    },
+    {
+        "question": "Which of the following best describes 'Iterative Development' in Scrum?",
+        "options": [
+            "Developing the entire product at once",
+            "Building and improving the product incrementally",
+            "Using strict deadlines",
+            "Delivering the final product after all work is completed"
+        ],
+        "answer": [1],
+        "explanation": "Scrum uses iterative development, where each sprint builds upon previous progress to meet user needs."
+    },
+    {
+        "question": "What is the main difference between Scrum and Agile?",
+        "options": [
+            "Scrum and Agile are the same",
+            "Scrum is a specific Agile framework with defined roles and events",
+            "Scrum focuses on documentation",
+            "Agile has no structure, while Scrum does"
+        ],
+        "answer": [1],
+        "explanation": "Scrum is a structured framework within Agile, with specific roles, sprints, and processes to support agile work."
+    }
+    {
+        "question": "Which of the following is NOT one of the four pillars of Agile?",
+        "options": [
+            "Individuals and interactions over processes and tools",
+            "Customer collaboration over contract negotiation",
+            "Following a strict project plan",
+            "Responding to change over following a plan"
+        ],
+        "answer": [2],
+        "explanation": "Agile values flexibility and collaboration, not strict adherence to a project plan."
+    },
+    {
+        "question": "What does the Agile principle of 'Customer Collaboration over Contract Negotiation' emphasize?",
+        "options": [
+            "Defining strict contract terms",
+            "Maintaining flexibility and open communication with the customer",
+            "Focusing on processes rather than customer needs",
+            "Eliminating customer involvement entirely"
+        ],
+        "answer": [1],
+        "explanation": "This Agile principle highlights the importance of customer feedback and collaboration to deliver valuable solutions."
+    },
+    {
+        "question": "What is the main goal of delivering software early and continuously in Agile?",
+        "options": [
+            "To avoid customer feedback",
+            "To provide early and ongoing value to the customer",
+            "To minimize the project budget",
+            "To complete all testing before launch"
+        ],
+        "answer": [1],
+        "explanation": "The principle of early and continuous delivery in Agile aims to deliver ongoing value and adapt to feedback."
+    },
+    {
+        "question": "How often should Scrum teams hold a 'Sprint Retrospective'?",
+        "options": [
+            "At the start of every project",
+            "Every two weeks",
+            "At the end of each sprint",
+            "Whenever issues arise"
+        ],
+        "answer": [2],
+        "explanation": "Scrum teams conduct Sprint Retrospectives at the end of each sprint to reflect on improvements."
+    },
+    {
+        "question": "What does the Agile principle 'Working software is the primary measure of progress' mean?",
+        "options": [
+            "Progress is measured by the amount of documentation produced",
+            "Success is based on the volume of code written",
+            "Progress is measured by the functionality delivered to users",
+            "The more complex the software, the better"
+        ],
+        "answer": [2],
+        "explanation": "In Agile, working software that meets user needs is the main indicator of progress."
+    },
+    {
+        "question": "Which role is responsible for maximizing product value in Scrum?",
+        "options": [
+            "Scrum Master",
+            "Product Owner",
+            "Development Team",
+            "Stakeholders"
+        ],
+        "answer": [1],
+        "explanation": "The Product Owner is responsible for maximizing product value and managing the product backlog."
+    },
+    {
+        "question": "What does Agile mean by 'Simplicity—the art of maximizing the amount of work not done'?",
+        "options": [
+            "Avoiding complex projects",
+            "Eliminating unnecessary work",
+            "Limiting the scope of work to stay under budget",
+            "Avoiding customer requirements"
+        ],
+        "answer": [1],
+        "explanation": "This principle encourages teams to focus only on work that adds value, avoiding unnecessary complexity."
+    },
+    {
+        "question": "In Scrum, what is the purpose of the Daily Standup?",
+        "options": [
+            "To set long-term goals",
+            "To discuss major project changes",
+            "To track progress and address daily issues",
+            "To review customer feedback"
+        ],
+        "answer": [2],
+        "explanation": "Daily Standups help the team review progress, set goals for the day, and resolve any obstacles."
+    },
+    {
+        "question": "Which Agile principle focuses on 'Continuous attention to technical excellence and good design'?",
+        "options": [
+            "Customer collaboration",
+            "Simplicity",
+            "Sustainable development",
+            "Technical excellence and good design"
+        ],
+        "answer": [3],
+        "explanation": "This principle emphasizes the importance of technical quality and design to maintain an adaptable codebase."
+    },
+    {
+        "question": "In Agile, why is 'Responding to change over following a plan' important?",
+        "options": [
+            "It promotes customer satisfaction through flexibility",
+            "It allows teams to ignore initial goals",
+            "It helps avoid all project risks",
+            "It reduces the time spent on documentation"
+        ],
+        "answer": [0],
+        "explanation": "Agile teams prioritize adapting to changes to meet customer needs rather than sticking strictly to a plan."
+    }
+]
