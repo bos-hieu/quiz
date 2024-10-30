@@ -22,5 +22,9 @@
   {
     "name": "Ochestration quiz 1",
     "file": "ochestration-quiz1.json"
+  },
+  {
+    "name": "Smart contract quiz 2",
+    "file": "smart-contract-quiz2.json"
   }
 ]
