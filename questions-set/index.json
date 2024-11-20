@@ -26,5 +26,9 @@
   {
     "name": "Smart contract quiz 2",
     "file": "smart-contract-quiz2.json"
+  },
+  {
+    "name": "Smart contract quiz 3",
+    "file": "sm-quiz3.json"
   }
 ]

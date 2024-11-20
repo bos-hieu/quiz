@@ -1,0 +1,534 @@
+[
+  {
+    "question": "Which of the following is not a variable type in Solidity?",
+    "options": [
+      "uint256",
+      "string",
+      "uint128",
+      "list"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "The 'list' type is not supported as a variable type in Solidity. Solidity supports data types such as uint256, uint128, and string."
+  },
+  {
+    "question": "_____ is an example of a version control system for software projects.",
+    "options": [
+      "Remix",
+      "VSCode",
+      "Git",
+      "Solidity"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Git is a widely used version control system for tracking changes in source code during software development."
+  },
+  {
+    "question": "An Ethereum dapp often uses _____ protocol to send requests to an Ethereum node.",
+    "options": [
+      "HTTP",
+      "ICMP",
+      "LDAP",
+      "JSON"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Ethereum dapps commonly use the HTTP protocol to send requests to Ethereum nodes."
+  },
+  {
+    "question": "Which keyword in a line of Solidity might throw an (intentional) error at that line?",
+    "options": [
+      "emit",
+      "uint",
+      "require",
+      "if"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "The 'require' keyword in Solidity is used to throw an error if a specified condition is not met."
+  },
+  {
+    "question": "Which of the following is not an example of function visibility?",
+    "options": [
+      "external",
+      "immutable",
+      "public",
+      "private"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "'immutable' is not a function visibility specifier; it is used for state variables."
+  },
+  {
+    "question": "Goerli is an Ethereum testnet.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Goerli is indeed one of the Ethereum testnets used for testing smart contracts."
+  },
+  {
+    "question": "Which of the following is not a variable visibility type?",
+    "options": [
+      "public",
+      "internal",
+      "private",
+      "external"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "'external' is not used for variable visibility; it is used for function visibility."
+  },
+  {
+    "question": "Constructors in Solidity smart contracts are required.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Constructors in Solidity are optional and are used to initialize a contract."
+  },
+  {
+    "question": "_____ will be called when msg.data is sent with a transaction but does not match any existing function in the contract.",
+    "options": [
+      "receive()",
+      "send()",
+      "fallback()",
+      "inherit()"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "The 'fallback()' function is triggered when msg.data does not match any function signature in the contract."
+  },
+  {
+    "question": "_____ is the recommended way to send value with a transaction from a contract.",
+    "options": [
+      "send(x)",
+      "call{value: x}(\"\")",
+      "transfer(x)",
+      "receive(x)"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "The recommended way to send Ether is 'call{value: x}(\"\")' because it forwards all available gas and prevents certain limitations of 'transfer' and 'send'."
+  },
+  {
+    "question": "Which of the following is not an example of data location for a variable in a Solidity smart contract?",
+    "options": [
+      "memory",
+      "calldata",
+      "temporary",
+      "storage"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "'temporary' is not a valid data location. Solidity uses 'memory', 'calldata', and 'storage' for variable data locations."
+  },
+  {
+    "question": "_____ keyword is for a type of function that often can be called without using any gas fees.",
+    "options": [
+      "get",
+      "constant",
+      "view",
+      "pure"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "'pure' functions are gas-free because they neither read nor modify the blockchain state."
+  },
+  {
+    "question": "The 'new' keyword in Solidity will create a new variable of any type.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "The 'new' keyword in Solidity is used to create new instances of contracts, not variables of any type."
+  },
+  {
+    "question": "Which of the following statements are true of an upgradeable contract architecture? (pick multiple)",
+    "options": [
+      "Storage layout must be exactly the same between proxy and logic contracts.",
+      "The logic contract must make delegatecalls to the proxy contract.",
+      "Constructors cannot be used.",
+      "The state of the proxy and logic contract will always be the same.",
+      "The logic contract will be replaced when an upgrade occurs."
+    ],
+    "answer": [
+      0,
+      2,
+      4
+    ],
+    "explanation": "In an upgradeable contract architecture, the storage layout must match between proxy and logic contracts, constructors are generally avoided, and the logic contract is replaced during upgrades. Delegatecalls are made by the proxy to the logic contract, not the other way around."
+  },
+  {
+    "question": "What are the two types of EVM accounts? (select 2)",
+    "options": [
+      "oracle",
+      "externally owned",
+      "contract",
+      "internal"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "The two types of accounts in the Ethereum Virtual Machine (EVM) are externally owned accounts (EOA) and contract accounts."
+  },
+  {
+    "question": "_____ describes an Internet that is read-write-own.",
+    "options": [
+      "web1",
+      "web2",
+      "web3",
+      "web4"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Web3 represents an Internet that is read-write-own, emphasizing decentralization and user ownership of data."
+  },
+  {
+    "question": "_____ describes the Internet as it existed primarily before 2004.",
+    "options": [
+      "web1",
+      "web2",
+      "web3",
+      "web4"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Web1 refers to the early stage of the Internet, which was mostly read-only and existed prior to 2004."
+  },
+  {
+    "question": "The main function of Metamask (browser wallet) in web3 architecture is to:",
+    "options": [
+      "view transactions",
+      "make Ethereum API calls",
+      "estimate gas limit",
+      "sign transactions"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Metamask's primary function is to sign transactions and interact with decentralized applications (dApps) on the blockchain."
+  },
+  {
+    "question": "Which of the following is not an example of function visibility in Solidity?",
+    "options": [
+      "external",
+      "immutable",
+      "public",
+      "private"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "'immutable' is not a function visibility specifier; it is used to declare state variables that are assigned once and cannot be changed."
+  },
+  {
+    "question": "Off-chain storage in dapps is primarily a solution to:",
+    "options": [
+      "save gas fees for users",
+      "further decentralize",
+      "increase redundancy",
+      "secure data"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Off-chain storage helps reduce on-chain data storage, saving gas fees for users while enabling cost-efficient scaling."
+  },
+  {
+    "question": "Which of the following is a special Solidity variable?",
+    "options": [
+      "block.value",
+      "msg.timestamp",
+      "block.timestamp",
+      "msg.hash"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "block.timestamp is a special Solidity variable that represents the timestamp of the current block."
+  },
+  {
+    "question": "_____ describes an Internet that is read-only and static.",
+    "options": [
+      "web1",
+      "web2",
+      "web3",
+      "web4"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Web1 describes the early stage of the Internet, which was primarily read-only and static."
+  },
+  {
+    "question": "What are the two types of EVM accounts? (select 2)",
+    "options": [
+      "oracle",
+      "externally owned",
+      "contract",
+      "internal"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "The two types of EVM accounts are externally owned accounts (EOA) and contract accounts."
+  },
+  {
+    "question": "_____ describes an Internet that is read-write-own.",
+    "options": [
+      "web1",
+      "web2",
+      "web3",
+      "web4"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Web3 refers to an Internet that emphasizes decentralization and user ownership of data, representing a read-write-own model."
+  },
+  {
+    "question": "The _____ contract stores the state in upgradeable contract architecture.",
+    "options": [
+      "proxy",
+      "logic"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "In an upgradeable contract architecture, the proxy contract stores the state and delegates calls to the logic contract."
+  },
+  {
+    "question": "In Solidity, _____ is used to apply another contract's function to the state of the current contract.",
+    "options": [
+      "externalcall",
+      "proxycall",
+      "delegatecall",
+      "transfercall"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "The 'delegatecall' function in Solidity allows a contract to use another contract's function while preserving the current contract's context and state."
+  },
+  {
+    "question": "The main function of Metamask (browser wallet) in web3 architecture is to:",
+    "options": [
+      "view transactions",
+      "make Ethereum API calls",
+      "estimate gas limit",
+      "sign transactions"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "Metamask's primary role is to sign transactions and interact securely with decentralized applications (dApps) on the blockchain."
+  },
+  {
+    "question": "Off-chain storage in dapps is primarily a solution to:",
+    "options": [
+      "save gas fees for users",
+      "further decentralize",
+      "increase redundancy",
+      "secure data"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "Off-chain storage reduces on-chain data usage, saving gas fees for users and enabling cost-effective scaling for dapps."
+  },
+  {
+    "question": "_____ is the component of a transaction where the function and parameters are when sending a message to a smart contract.",
+    "options": [
+      "nonce",
+      "data",
+      "gasLimit",
+      "value"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "The 'data' field in a transaction contains the function signature and parameters sent to a smart contract."
+  },
+  {
+    "question": "Which of the following are Node as a Service providers?",
+    "options": [
+      "Polygon",
+      "Alchemy",
+      "Infura",
+      "MakerDAO"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "Alchemy and Infura are popular Node as a Service providers, allowing developers to interact with the Ethereum blockchain without running their own nodes."
+  },
+  {
+    "question": "Which of the following is a special Solidity variable?",
+    "options": [
+      "block.value",
+      "msg.timestamp",
+      "block.timestamp",
+      "msg.hash"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "block.timestamp is a special Solidity variable that provides the timestamp of the current block."
+  },
+  {
+    "question": "Which of the following is a special Solidity variable?",
+    "options": [
+      "block.value",
+      "msg.timestamp",
+      "block.timestamp",
+      "msg.hash"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "block.timestamp is a special Solidity variable that provides the timestamp of the current block."
+  },
+  {
+    "question": "Which keyword is used in Solidity language to create contract inheritance?",
+    "options": [
+      "inherit",
+      "in",
+      "child",
+      "is"
+    ],
+    "answer": [
+      3
+    ],
+    "explanation": "The 'is' keyword in Solidity is used to indicate that a contract inherits from another contract."
+  },
+  {
+    "question": "_____ is the component of oracle architecture that exists off-chain.",
+    "options": [
+      "oracle contract",
+      "oracle node",
+      "oracle consumer",
+      "oracle problem"
+    ],
+    "answer": [
+      1
+    ],
+    "explanation": "Oracle nodes are off-chain components that fetch external data for smart contracts."
+  },
+  {
+    "question": "What are the two types of EVM accounts? (select 2)",
+    "options": [
+      "internal",
+      "externally owned",
+      "oracle",
+      "contract"
+    ],
+    "answer": [
+      1,
+      3
+    ],
+    "explanation": "The two types of accounts in EVM are externally owned accounts (EOA) and contract accounts."
+  },
+  {
+    "question": "Only externally owned accounts can send a message using the init field to create a new contract.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "EOAs are responsible for creating new contracts by sending a transaction with the init code."
+  },
+  {
+    "question": "Which of the following make up the oracle problem (select 2)?",
+    "options": [
+      "Oracles may not always have up to date information",
+      "Oracles contract address may not be known",
+      "Oracles could expose data publicly",
+      "Oracles could tamper with data"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "The oracle problem includes issues like outdated information and the possibility of tampered data."
+  },
+  {
+    "question": "In decentralized applications, slashing typically means:",
+    "options": [
+      "a blockchain that is going into a state of no consensus",
+      "a period of faster block creation (higher transaction per second)",
+      "a penalty via staked cryptocurrency for bad behaviour",
+      "cryptocurrency devaluation due to higher supply"
+    ],
+    "answer": [
+      2
+    ],
+    "explanation": "Slashing refers to a penalty enforced by taking away staked cryptocurrency for malicious or bad behavior in decentralized applications."
+  },
+  {
+    "question": "Chainlink offerings include (multi-select) (Out of date)",
+    "options": [
+      "Data Feeds Oracles",
+      "Any API Oracles",
+      "VRF Oracles",
+      "ERC20"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Chainlink provides services such as Data Feeds, Any API Oracles, and VRF Oracles. ERC20 is unrelated."
+  },
+  {
+    "question": "Data Feeds update only on the following triggers (Out of date)",
+    "options": [
+      "Deviation Threshold",
+      "Request Threshold",
+      "Majority Threshold",
+      "Heartbeat Threshold"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explanation": "Data Feeds are updated based on predefined deviation thresholds or heartbeat intervals."
+  },
+  {
+    "question": "With contract inheritance, the child contract has access to all parent contract code without sending any transactions.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": [
+      0
+    ],
+    "explanation": "In Solidity, a child contract inherits all code from the parent contract, enabling it to use the parent's logic without additional transactions."
+  }
+]
