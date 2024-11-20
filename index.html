@@ -217,7 +217,7 @@
                 else questionDiv.style.display = 'none';
                 questionDiv.innerHTML = `
                     <p>${index + 1}. ${q.question}</p>
-                    ${q.options.map((option, i) => `<label><input type="checkbox" name="question${index}" value="${i}"> ${String.fromCharCode(65 + i)}. ${option}</label><br>`).join('')}
+                    ${q.options.map((option, i) => `<label><input type="${q.answer.length === 1 ? 'radio' : 'checkbox'}" name="question${index}" value="${i}"> ${String.fromCharCode(65 + i)}. ${option}</label><br>`).join('')}
                     <div class="explanation" id="explanation${index}" style="display: none;">${q.explanation}</div>
                 `;
                 quizContainer.appendChild(questionDiv);
